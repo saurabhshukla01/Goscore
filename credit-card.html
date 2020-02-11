@@ -1,0 +1,668 @@
+
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Credit Card</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+      <link rel="stylesheet" type="text/css" href="css/style.css" />
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link href="https://fonts.googleapis.com/css?family=Tajawal:300,400,500,700,800,900&display=swap" rel="stylesheet">
+      <script src="js/jquery-1.11.1.min.js"></script>
+   </head>
+   <body>
+      <!-- header-->
+      <!--Main Navigation-->
+      <header>
+         <!-- top bar start-->
+         <div class="top-main">
+            <div class="number">
+               <h3><i class="fa fa-phone" aria-hidden="true"></i> +91 000 000 0000</h3>
+               <div class="clearfix"></div>
+            </div>
+            <div class="social-icons">
+               <ul class="top-icons">
+                  <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                  <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                  <li><a href="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
+                  <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+               </ul>
+            </div>
+            <div class="clearfix"></div>
+         </div>
+         <!-- top Bar end -->
+        <div class="logo-container">
+         <nav class="container">
+            
+            <div class="navbar navbar-right navbar-expand-lg navbar-light">
+               <h1><a class="navbar-brand text-capitalize" href="index.html"><img src="images/logo.png" alt="logo" class="logo" /></a></h1>
+               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+               </button>
+               <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav text-center  ml-lg-auto">
+                     <li class="nav-item active  mr-3">
+                        <a class="nav-link" href="index.html">Home
+                        <span class="sr-only">(current)</span>
+                        </a>
+                     </li>
+                     <li class="nav-item  mr-3">
+                        <a class="nav-link" href="credit-card.html">Credit Card</a>
+                     </li>
+                     <li class="nav-item  mr-3">
+                        <a class="nav-link" href="about-us.html">About Us</a>
+                     </li>
+                     <li class="nav-item dropdown mr-3">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Loan
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                              <a class="dropdown-item" href="loan/personal-loan.html">Personal Loan</a>
+                              <a class="dropdown-item" href="loan/home-loan.html">Home Loan</a>
+                              <a class="dropdown-item" href="loan/car-loan.html">Car Loan</a>
+                              <a class="dropdown-item" href="loan/business-loan.html">Business Loan</a>
+                              <a class="dropdown-item" href="loan/gold-loan.html">Gold Loan</a>
+                        </div>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="contact-us.html">Contact Us</a>
+                     </li>
+                  </ul>
+               </div>
+               <div class="nav-login btn" data-toggle="modal" data-target="#modalLoginForm">Login</div>
+            </div>
+         </nav>
+        </div>
+      </header>
+      <!-- header-->
+      <!--banner-->
+      <section class="credit-card-section">
+         <div class="container-fluid">
+            <div class="row">
+               <div class="banner-text">
+                     <span>Credit Cards</span>
+                     <p>Credit Card is not just a status symbol. It is a convenient financial product for
+                     everyday expenses. Apply for credit card catering to all your needs ranging from
+                     travel, lifestyle, dining, movies and shopping.</p>
+               </div>
+               <img src="images/credit-card-banner.jpg" alt="" style="width:100%;" />
+            </div>
+         </div>
+      </section>
+      <!--banner bottom-->
+      <section class="loan-apply">
+         <div class="container">
+            <div class="row text-center">
+               <h1>How to Apply for Credit Card</h1>
+               <div class="col-md-3">
+                  <div class="circle">1</div>
+                  <span>Check Eligibility</span>
+                  <p>Check your eligibility for a Credit Card</p>
+               </div>
+               <div class="col-md-3">
+                  <div class="circle">2</div>
+                  <span>Submit Application</span>
+                  <p>Complete a 100% online application form</p>
+               </div>
+               <div class="col-md-3">
+                  <div class="circle">3</div>
+                  <span> Get Sanctioned</span>
+                  <p>We will evaluate your application and propose a fair sanction</p>
+               </div>
+               <div class="col-md-3">
+                  <div class="circle">4</div>
+                  <span>Receive Credit Card</span>
+                  <p>Receive your Credit Card within 15 days and use it anywhere</p>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <!--tab content start-->
+      <section class="credit-filter">
+         
+            <div class="container">
+                  
+                  <ul id="filters" class="clearfix">
+                     <li><span class="filter active" data-filter=".cashback, .rewards, .highvalue, .lowfees, .commercial">All Credit Cards</span></li>
+                     <li><span class="filter" data-filter=".cashback">Cashback</span></li>
+                     <li><span class="filter" data-filter=".rewards">Rewards</span></li>
+                     <li><span class="filter" data-filter=".highvalue">High Value</span></li>
+                     <li><span class="filter" data-filter=".lowfees">Low Fees</span></li>
+                     <li><span class="filter" data-filter=".commercial">Commercial</span></li>
+                  </ul>
+            
+                  <div id="portfoliolist">   
+                     <div class="portfolio lowfees" data-cat="lowfees">
+                        <div class="portfolio-wrapper">				
+                           <img src="images/credit-card.png" alt="" />
+                           <div class="label">
+                              <div class="label-text">
+                                 <a class="text-title">HDFC Bank Urbane Gold Credit Card</a>
+                                <!-- <span class="text-category">Joining Fee: INR 0</span>
+                                 <span class="text-category">Annual Fee: INR 199</span>-->
+                                 <span>
+                                       <ul class="ks-cboxtags">
+                                             <li><input type="checkbox" id="checkboxOne" value="" class="chkPassport"><label for="checkboxOne">Add to Compare</label></li>
+                                       </ul>
+                                 </span>
+                                 <span>
+                                       <a href="#" class="compare-know-more pull-right">Know more</a>
+                                 </span>
+                              </div>
+                              <div class="label-bg"></div>
+                           </div>
+                        </div>
+                     </div>				
+            
+                     <div class="portfolio cashback" data-cat="cashback">
+                        <div class="portfolio-wrapper">			
+                           <img src="images/credit-card.png" alt="" />
+                           <div class="label">
+                              <div class="label-text">
+                                 <a class="text-title">Visual Infography</a>
+                                 <span class="text-category">APP</span>
+                              </div>
+                              <div class="label-bg"></div>
+                           </div>
+                        </div>
+                     </div>		
+                     
+                     <div class="portfolio commercial" data-cat="commercial">
+                        <div class="portfolio-wrapper">						
+                           <img src="images/credit-card1.png" alt="" />
+                           <div class="label">
+                              <div class="label-text">
+                                 <a class="text-title">Sonor's Design</a>
+                                 <span class="text-category">Web design</span>
+                              </div>
+                              <div class="label-bg"></div>
+                           </div>
+                        </div>
+                     </div>				
+                     
+                     <div class="portfolio rewards" data-cat="rewards">
+                        <div class="portfolio-wrapper">			
+                           <img src="images/credit-card2.png" alt="" />
+                           <div class="label">
+                              <div class="label-text">
+                                 <a class="text-title">Typography Company</a>
+                                 <span class="text-category">Business card</span>
+                              </div>
+                              <div class="label-bg"></div>
+                           </div>
+                        </div>
+                     </div>	
+                              
+                     <div class="portfolio cashback" data-cat="cashback">
+                        <div class="portfolio-wrapper">
+                           <img src="images/credit-card3.png" alt="" />
+                           <div class="label">
+                              <div class="label-text">
+                                 <a class="text-title">Weatherette</a>
+                                 <span class="text-category">APP</span>
+                              </div>
+                              <div class="label-bg"></div>
+                           </div>
+                        </div>
+                     </div>			
+                     
+                     <div class="portfolio rewards" data-cat="rewards">
+                        <div class="portfolio-wrapper">			
+                           <img src="images/credit-card.png" alt="" />
+                           <div class="label">
+                              <div class="label-text">
+                                 <a class="text-title">BMF</a>
+                                 <span class="text-category">Business card</span>
+                              </div>
+                              <div class="label-bg"></div>
+                           </div>
+                        </div>
+                     </div>	
+                     
+                     <div class="portfolio rewards" data-cat="rewards">
+                        <div class="portfolio-wrapper">			
+                           <img src="images/credit-card1.png" alt="" />
+                           <div class="label">
+                              <div class="label-text">
+                                 <a class="text-title">Techlion</a>
+                                 <span class="text-category">Business card</span>
+                              </div>
+                              <div class="label-bg"></div>
+                           </div>
+                        </div>
+                     </div>	
+                     
+                     <div class="portfolio lowfees" data-cat="lowfees">
+                        <div class="portfolio-wrapper">			
+                           <img src="images/credit-card2.png" alt="" />
+                           <div class="label">
+                              <div class="label-text">
+                                 <a class="text-title">KittyPic</a>
+                                 <span class="text-category">Logo</span>
+                              </div>
+                              <div class="label-bg"></div>
+                           </div>
+                        </div>
+                     </div>																																							
+                     
+                     <div class="portfolio cashback" data-cat="cashback">
+                        <div class="portfolio-wrapper">			
+                           <img src="images/credit-card3.png" alt="" />
+                           <div class="label">
+                              <div class="label-text">
+                                 <a class="text-title">Graph Plotting</a>
+                                 <span class="text-category">APP</span>
+                              </div>
+                              <div class="label-bg"></div>
+                           </div>
+                        </div>
+                     </div>														
+                     
+                     <div class="portfolio rewards" data-cat="rewards">
+                        <div class="portfolio-wrapper">			
+                           <img src="images/credit-card.png" alt="" />
+                           <div class="label">
+                              <div class="label-text">
+                                 <a class="text-title">QR Quick Response</a>
+                                 <span class="text-category">Business card</span>
+                              </div>
+                              <div class="label-bg"></div>
+                           </div>
+                        </div>
+                     </div>				
+            
+                     <div class="portfolio lowfees" data-cat="lowfees">
+                        <div class="portfolio-wrapper">			
+                           <img src="images/credit-card1.png" alt="" />
+                           <div class="label">
+                              <div class="label-text">
+                                 <a class="text-title">Mobi Sock</a>
+                                 <span class="text-category">Logo</span>
+                              </div>
+                              <div class="label-bg"></div>
+                           </div>
+                        </div>
+                     </div>																	
+            
+                     <div class="portfolio lowfees" data-cat="lowfees">
+                        <div class="portfolio-wrapper">			
+                           <img src="images/credit-card2.png" alt="" />
+                           <div class="label">
+                              <div class="label-text">
+                                 <a class="text-title">Village Community Church</a>
+                                 <span class="text-category">Logo</span>
+                              </div>
+                              <div class="label-bg"></div>
+                           </div>
+                        </div>
+                     </div>													
+                     
+                     <div class="portfolio highvalue" data-cat="highvalue">
+                        <div class="portfolio-wrapper">			
+                           <img src="images/credit-card3.png" alt="" />
+                           <div class="label">
+                              <div class="label-text">
+                                 <a class="text-title">Domino's Pizza</a>
+                                 <span class="text-category">Icon</span>
+                              </div>
+                              <div class="label-bg"></div>
+                           </div>
+                        </div>
+                     </div>							
+            
+                     <div class="portfolio commercial" data-cat="commercial">
+                        <div class="portfolio-wrapper">						
+                           <img src="images/credit-card.png" alt="" />
+                           <div class="label">
+                              <div class="label-text">
+                                 <a class="text-title">Backend Admin</a>
+                                 <span class="text-category">Web design</span>
+                              </div>
+                              <div class="label-bg"></div>
+                           </div>
+                        </div>
+                     </div>																								
+            
+                     <div class="portfolio highvalue" data-cat="highvalue">
+                        <div class="portfolio-wrapper">			
+                           <img src="images/credit-card1.png" alt="" />
+                           <div class="label">
+                              <div class="label-text">
+                                 <a class="text-title">Instagram</a>
+                                 <span class="text-category">Icon</span>
+                              </div>
+                              <div class="label-bg"></div>
+                           </div>
+                        </div>
+                     </div>				
+                     
+                     <div class="portfolio commercial" data-cat="commercial">
+                        <div class="portfolio-wrapper">						
+                           <img src="images/credit-card2.png" alt="" />
+                           <div class="label">
+                              <div class="label-text">
+                                 <a class="text-title">Student Guide</a>
+                                 <span class="text-category">Web design</span>
+                              </div>
+                              <div class="label-bg"></div>
+                           </div>
+                        </div>
+                     </div>																	
+            
+                     <div class="portfolio highvalue" data-cat="highvalue">
+                        <div class="portfolio-wrapper">
+                           <img src="images/credit-card3.png" alt="" />
+                           <div class="label">
+                              <div class="label-text">
+                                 <a class="text-title">Scoccer</a>
+                                 <span class="text-category">Icon</span>
+                              </div>
+                              <div class="label-bg"></div>
+                           </div>
+                        </div>
+                     </div>																																																																
+            
+                     <div class="portfolio highvalue" data-cat="highvalue">
+                        <div class="portfolio-wrapper">						
+                           <img src="images/credit-card.png" alt="" />
+                           <div class="label">
+                              <div class="label-text">
+                                 <a class="text-title">3D Map</a>
+                                 <span class="text-category">Icon</span>
+                              </div>
+                              <div class="label-bg"></div>
+                           </div>
+                        </div>
+                     </div>			
+                     
+                     <div class="portfolio commercial" data-cat="commercial">
+                        <div class="portfolio-wrapper">						
+                           <img src="images/credit-card1.png" alt="" />
+                           <div class="label">
+                              <div class="label-text">
+                                 <a class="text-title">Note</a>
+                                 <span class="text-category">Web design</span>
+                              </div>
+                              <div class="label-bg"></div>
+                           </div>
+                        </div>
+                     </div>									
+                     
+                     <div class="portfolio lowfees" data-cat="lowfees">
+                        <div class="portfolio-wrapper">			
+                           <img src="images/credit-card2.png" alt="" />
+                           <div class="label">
+                              <div class="label-text">
+                                 <a class="text-title">Native Designers</a>
+                                 <span class="text-category">Logo</span>
+                              </div>
+                              <div class="label-bg"></div>
+                           </div>
+                        </div>
+                     </div>																	
+            
+                     <div class="portfolio lowfees" data-cat="lowfees">
+                        <div class="portfolio-wrapper">			
+                           <img src="images/credit-card3.png" alt="" />
+                           <div class="label">
+                              <div class="label-text">
+                                 <a class="text-title">Bookworm</a>
+                                 <span class="text-category">Logo</span>
+                              </div>
+                              <div class="label-bg"></div>
+                           </div>
+                        </div>
+                     </div>																												
+                     
+                     <div class="portfolio highvalue" data-cat="highvalue">
+                        <div class="portfolio-wrapper">			
+                           <img src="images/credit-card.png" alt="" />
+                           <div class="label">
+                              <div class="label-text">
+                                 <a class="text-title">Sandwich</a>
+                                 <span class="text-category">Icon</span>
+                              </div>
+                              <div class="label-bg"></div>
+                           </div>
+                        </div>
+                     </div>																								
+                     
+                     <div class="portfolio rewards" data-cat="rewards">
+                        <div class="portfolio-wrapper">			
+                           <img src="images/credit-card1.png" alt="" />
+                           <div class="label">
+                              <div class="label-text">
+                                 <a class="text-title">Reality</a>
+                                 <span class="text-category">Business card</span>
+                              </div>
+                              <div class="label-bg"></div>
+                           </div>
+                        </div>
+                     </div>	
+            
+                     <div class="portfolio lowfees" data-cat="lowfees">
+                        <div class="portfolio-wrapper">			
+                           <img src="images/credit-card2.png" alt="" />
+                           <div class="label">
+                              <div class="label-text">
+                                 <a class="text-title">Speciallisterne</a>
+                                 <span class="text-category">Logo</span>
+                              </div>
+                              <div class="label-bg"></div>
+                           </div>
+                        </div>
+                     </div>				
+                   </div>
+                  
+               </div>
+               <div class="comparediv" style="display: none">
+                     <div class="comparedivcontent">
+                           sddadadadaddad Number:
+                           
+                       </div>
+               </div>
+      </section>
+      <!--tab content end-->
+
+      <section class="footer-top">
+         <div class="container">
+            <div class="row">askhkas </div>
+         </div>
+         </div>
+      </section>
+      
+      <!-- foooter-->
+      <footer>
+         <div class="copyright">
+            Please Note***** GoGetScore will never ask you to make a payment anywhere outside the secure GoGetScore website. DO NOT make payment to any other bank account or wallet or divulge your bank/card details to fraudsters and imposters claiming to be operating on our behalf.
+         </div>
+         <div class="text-center">
+            <ul class="ml-lg-auto">
+               <li class="mr-3">
+                  <a href="index.html">Home</a>
+               </li>
+               <li class="mr-3">
+                  <a href="about-us.html">About Us</a>
+               </li>
+               <li class="mr-3">
+                  <a href="term-and-condition.html">Terms & Conditions</a>
+               </li>
+               <li class="mr-3">
+                  <a href="privacy-policy.html">Privacy Policy</a>
+               </li>
+               <li>
+                  <a href="contact-us.html">Contact Us</a>
+               </li>
+            </ul>
+         </div>
+      </footer>
+      <!-- footer-->
+      <!--login form pop up-->
+      <div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+         aria-hidden="true">
+         <div class="modal-dialog" role="document">
+            <div class="modal-content">
+               <div class="modal-header text-center">
+                  <h4 class="modal-title w-100 font-weight-bold">Login</h4>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                  </button>
+               </div>
+               <div class="modal-body mx-3">
+                  <div class="form-group">
+                     <label class="form-label" for="verifyphone">Enter your Phone number</label>
+                     <input type="text" id="verifyphone" class="form-input" name="verifyphone" />
+                  </div>
+               </div>
+               <div class="modal-footer d-flex justify-content-center">
+                  <div class="btn btn-primary submit-btn" data-dismiss="modal" data-toggle="modal" data-target="#modalLoginFormverify">Verify</div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!--login form pop up-->
+      <!--login form verify  pop up-->
+      <div class="modal fade" id="modalLoginFormverify" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+         aria-hidden="true">
+         <div class="modal-dialog" role="document">
+            <div class="modal-content">
+               <div class="modal-header text-center">
+                  <h4 class="modal-title w-100 font-weight-bold">Enter OTP</h4>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                  </button>
+               </div>
+               <div class="modal-body mx-3 text-center">
+                  <form method="get" class="digit-group" data-group-name="digits" data-autosubmit="false" autocomplete="off">
+                     <input type="text" id="digit-1" name="digit-1" data-next="digit-2" />
+                     <input type="text" id="digit-2" name="digit-2" data-next="digit-3" data-previous="digit-1" />
+                     <span class="splitter">&ndash;</span>
+                     <input type="text" id="digit-3" name="digit-3" data-next="digit-4" data-previous="digit-2" />
+                     <input type="text" id="digit-4" name="digit-4" data-next="digit-5" data-previous="digit-3" />
+                  </form>
+               </div>
+               <div class="modal-footer d-flex justify-content-center">
+                  <div class="btn btn-primary submit-btn" data-toggle="modal" data-target="#modalLoginFormverify">Verify</div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!--login form verify pop up-->
+                     
+             
+      <script type="text/javascript" src="https://www.queness.com/resources/html/simple-portfolio-page/js/jquery.mixitup.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+      <script type="text/javascript" src="js/modernizr.custom.28468.js"></script>
+      <script type="text/javascript" src="js/jquery.cslider.js"></script>
+      
+      <script>
+         $(function() {
+         
+         	$('#da-slider').cslider();
+         	
+         });
+      </script>
+      <script>
+         $( function() {
+           $( "#datepicker" ).datepicker();
+         } );
+      </script>
+      <script>
+         $(".close").click(function() {
+                $("#myModal").hide();
+              });
+         
+          
+      </script>	
+      <script>
+         $('.date-form-input').click(function(){
+         	 $(this).parents('.form-group').addClass('focused');
+         	 $('.small-date').show();
+         	 $('.large-date').hide();
+            });
+      </script>
+      <script>
+         $('.form-input').focus(function(){
+           $(this).parents('.form-group').addClass('focused');
+         });
+         
+         $('.form-input').blur(function(){
+           var inputValue = $(this).val();
+           if ( inputValue == "" ) {
+             $(this).removeClass('filled');
+             $(this).parents('.form-group').removeClass('focused');  
+           } else {
+             $(this).addClass('filled');
+           }
+         })  
+         
+      </script>
+      <script>
+         $('.digit-group').find('input').each(function() {
+         	$(this).attr('maxlength', 1);
+         	$(this).on('keyup', function(e) {
+         		var parent = $($(this).parent());
+         		
+         		if(e.keyCode === 8 || e.keyCode === 37) {
+         			var prev = parent.find('input#' + $(this).data('previous'));
+         			
+         			if(prev.length) {
+         				$(prev).select();
+         			}
+         		} else if((e.keyCode >= 48 && e.keyCode <= 57) || (e.keyCode >= 65 && e.keyCode <= 90) || (e.keyCode >= 96 && e.keyCode <= 105) || e.keyCode === 39) {
+         			var next = parent.find('input#' + $(this).data('next'));
+         			
+         			if(next.length) {
+         				$(next).select();
+         			} else {
+         				if(parent.data('autosubmit')) {
+         					parent.submit();
+         				}
+         			}
+         		}
+         	});
+         });
+      </script>
+      <script type="text/javascript">
+        $(function () {
+		
+		var filterList = {
+		
+			init: function () {
+				$('#portfoliolist').mixItUp({
+  				selectors: {
+    			  target: '.portfolio',
+    			  filter: '.filter'	
+    		  },
+    		  load: {
+      		  filter: '.cashback'  
+      		}     
+				});								
+			
+			}
+
+		};
+		
+		// Run the show!
+		filterList.init();
+		
+		
+	});
+   $(function () {
+        $(".chkPassport").click(function () {
+            if ($(this).is(":checked")) {
+                $(".comparediv").show();
+            } else {
+                $(".comparediv").hide();
+            }
+        });
+    });			
+         </script>
+   </body>
+</html>
