@@ -1,0 +1,2170 @@
+
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Personal Loan</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
+      <link rel="stylesheet" type="text/css" href="../css/style.css" />
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,400i,700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="../css/style-login.css" />
+      
+      <script>
+      function loanamount() {
+         var v=document.getElementById("loanamount"); 
+         document.getElementById("showloanamount").textContent="(" + " " + v.value + " " + ")"
+      }
+
+      function tenure() {
+         var v=document.getElementById("tenure"); 
+         document.getElementById("showtenure").textContent="(" + " " + v.value + " " + ")"
+      }
+
+      function interestrate() {
+         var v1=document.getElementById("mininterestrate");
+         var v2=document.getElementById("maxinterestrate");  
+         document.getElementById("showinterestrate").textContent="(" + " " + v1.value + "%" + "  " + " - " + "  " + v2.value + "%" + " )"
+      }
+
+      function emifilter() {
+         var v1=document.getElementById("minemi");
+         var v2=document.getElementById("maxemi");  
+         document.getElementById("showemi").textContent="(" + " " + v1.value + " " + "₹" + "  " + " - " + "  " + v2.value + " " + "₹" + " )"
+      }
+      </script>
+   </head>
+   <body>
+      <!-- header-->
+      <!--Main Navigation-->
+      <header>
+         <!-- top bar start-->
+         <div class="top-main">
+            <div class="number">
+               <h3><i class="fa fa-phone" aria-hidden="true"></i> +91 000 000 0000</h3>
+               <div class="clearfix"></div>
+            </div>
+            <div class="social-icons">
+               <ul class="top-icons">
+                  <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                  <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                  <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                  <li><a href="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
+                  <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+               </ul>
+            </div>
+            <div class="clearfix"></div>
+         </div>
+         <!-- top Bar end -->
+         <div class="logo-container">
+            <nav class="container">
+               <div class="navbar navbar-right navbar-expand-lg navbar-light">
+                  <h1><a class="navbar-brand text-capitalize" href="../index.html"><img src="../images/logo.png" alt="logo" class="logo" /></a></h1>
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                     <ul class="navbar-nav text-center  ml-lg-auto">
+                        <li class="nav-item active  mr-3">
+                           <a class="nav-link" href="../index.html">Home
+                           <span class="sr-only">(current)</span>
+                           </a>
+                        </li>
+                        <li class="nav-item  mr-3">
+                           <a class="nav-link" href="../credit-card.html">Credit Card</a>
+                        </li>
+                        <li class="nav-item  mr-3">
+                           <a class="nav-link" href="../about-us.html">About Us</a>
+                        </li>
+                        <li class="nav-item dropdown mr-3">
+                           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                           Loan
+                           </a>
+                           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                              <a class="dropdown-item" href="personal-loan.html">Personal Loan</a>
+                              <a class="dropdown-item" href="home-loan.html">Home Loan</a>
+                              <a class="dropdown-item" href="car-loan.html">Car Loan</a>
+                              <a class="dropdown-item" href="business-loan.html">Business Loan</a>
+                              <a class="dropdown-item" href="gold-loan.html">Gold Loan</a>
+                           </div>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link" href="../contact-us.html">Contact Us</a>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="nav-login btn" data-toggle="modal" data-target="#modalLoginForm">Login</div>
+               </div>
+            </nav>
+         </div>
+      </header>
+      <!-- header-->
+
+<section class="bg-light border">
+   <div class="container">
+      <div class="filter p-2">
+            <div class="buttons">
+               <span class=""><small><strong> Filter By:</strong></small></span>
+                  <div class="position-relative d-inline-block">
+                        <span class="showSingle border pl-2 pr-2 pt-1 pb-1 cursor-pointer" target="1"><small><i class="fa fa-university mr-2" aria-hidden="true"></i>Bank</small><i class="fa fa-angle-down ml-1" aria-hidden="true"></i></span>
+                        <div id="div1" class="targetDiv p-3 bg-white border">
+                              <span class="close">x</span>
+                              <div class="box">
+                                    <ul class="users">
+                                          <li class="user">
+                                            <input type="checkbox" class="checkbox" id="bank1"></input>
+                                            <label for="bank1">
+                                              <div class="img-wrap">
+                                                <img src="http://crm.sheenz.in/assets/product_logo/hdfc-bank.png" alt="" class="circle"/>
+                                              </div>
+                                              <div class="details">
+                                                <div class="title">HDFC Bank</div>
+                                              </div>
+                                            </label>
+                                          </li>
+                                         <li class="user">
+                                            <input type="checkbox" class="checkbox" id="bank2"></input>
+                                            <label for="bank2">
+                                              <div class="img-wrap">
+                                                <img src="http://crm.sheenz.in/assets/product_logo/tata-capital-limited.png" alt="" class="circle"/>
+                                                 </div>
+                                              <div class="details">
+                                                <div class="title">Tata Capital</div>
+                                              </div>
+                                            </label>
+                                          </li>
+                                         <li class="user">
+                                            <input type="checkbox" class="checkbox" id="bank3"></input>
+                                            <label for="bank3">
+                                              <div class="img-wrap">
+                                                <img src="http://crm.sheenz.in/assets/product_logo/icici-bank.png" alt="" class="circle"/>
+                                                 </div>
+                                              <div class="details">
+                                                <div class="title">ICICI Bank</div>
+                                              </div>
+                                            </label>
+                                          </li>
+                                         <li class="user">
+                                            <input type="checkbox" class="checkbox" id="bank4"></input>
+                                            <label for="bank4">
+                                              <div class="img-wrap">
+                                                <img src="http://crm.sheenz.in/assets/product_logo/shubh-loan.png" alt="" class="circle"/>
+                                                 </div>
+                                              <div class="details">
+                                                <div class="title">Shubh Loan</div>
+                                              </div>
+                                            </label>
+                                          </li>
+                                         <li class="user">
+                                            <input type="checkbox" class="checkbox" id="bank5"></input>
+                                            <label for="bank5">
+                                              <div class="img-wrap">
+                                                <img src="http://crm.sheenz.in/assets/product_logo/incred.png" alt="" class="circle"/>
+                                                 </div>
+                                              <div class="details">
+                                                <div class="title">Incred</div>
+                                              </div>
+                                            </label>
+                                          </li>
+                                         <li class="user">
+                                            <input type="checkbox" class="checkbox" id="bank6"></input>
+                                            <label for="bank6">
+                                              <div class="img-wrap">
+                                                <img src="http://crm.sheenz.in/assets/product_logo/ujjivan-bank.png" alt="" class="circle"/>
+                                                 </div>
+                                              <div class="details">
+                                                <div class="title">Ujjivan Bank</div>
+                                              </div>
+                                            </label>
+                                          </li>
+                                         <li class="user">
+                                            <input type="checkbox" class="checkbox" id="bank7"></input>
+                                            <label for="bank7">
+                                              <div class="img-wrap">
+                                                <img src="http://crm.sheenz.in/assets/product_logo/iifl-small.png" alt="" class="circle"/>
+                                                 </div>
+                                              <div class="details">
+                                                <div class="title">IIFL</div>
+                                              </div>
+                                            </label>
+                                          </li>
+                                          <li class="user">
+                                             <input type="checkbox" class="checkbox" id="bank8"></input>
+                                             <label for="bank8">
+                                               <div class="img-wrap">
+                                                 <img src="http://crm.sheenz.in/assets/product_logo/logo.jpg" alt="" class="circle"/>
+                                                  </div>
+                                               <div class="details">
+                                                 <div class="title">YES Bank</div>
+                                               </div>
+                                             </label>
+                                           </li>
+                                        </ul>
+                                 </div> 
+                              </div>
+                  </div>
+
+                  <div class="position-relative d-inline-block">
+                     <span class="showSingle border pl-2 pr-2 pt-1 pb-1" target="2">
+                                          <small><strong><i class="fa fa-inr mr-2" aria-hidden="true"></i></strong> Amount</small>
+                                          <small class="font-weight-bold" style="color: #f6931f;"><span id="showloanamount"></span></small><i class="fa fa-angle-down ml-1" aria-hidden="true"></i>
+                                       </span>
+
+                                       <div id="div2" class="targetDiv bg-white border">
+                                             <span class="close">x</span>
+                                             <div class="p-4">
+                                                
+                                                  
+                                                 <label for="amount1">50,000</label><div class="slider-range-min1" style="width: 60%;display: inline-block;"></div>
+                                                 <span style="display: inline-block;width: 17%;">
+                                                      <label for="amount1" class="ml-2">5,00,000</label>                          
+                                                   <!--<input type="text" class="amount1" readonly style="width:100%;border:0; color:#f6931f; font-weight:bold;">-->
+                                                 </span>
+                                             </div>
+                                             <div class="bg-mid-light p-2 text-secondary d-inline-block w-100">
+                                                <span class="d-inline-block pt-2">Loan Amount :  </span>
+                                                <div class="float-right" style="width: 40%;">
+                                                   <span class="btn btn-light bg-white" style="width:54%;">
+                                                      <input type="text" class="amount1" id="loanamount" readonly style="width:100%;border:0; color:#f6931f; font-weight:bold;">
+                                                   </span><span class="btn btn-primary ml-3 done" onclick="loanamount();">done</span>
+                                                </div>
+                                             </div>
+                                          </div>
+                     </div>
+                 
+                  <div class="position-relative d-inline-block">
+                        <span class="showSingle border pl-2 pr-2 pt-1 pb-1" target="3">
+                              <small><strong><i class="fa fa-clock-o" aria-hidden="true"></i></strong> Tenure</small>
+                              <small class="font-weight-bold" style="color: #f6931f;"><span id="showtenure"></span></small><i class="fa fa-angle-down ml-1" aria-hidden="true"></i>
+                           </span>
+                        <div id="div3" class="targetDiv bg-white border">
+                              <span class="close">x</span>
+                              <div class="p-4">
+                              
+                                
+                                 <label for="amount">1 Year</label><div class="slider-range-min" style="width: 60%;display: inline-block;"></div>
+                                 <span style="display: inline-block;width: 17%;">
+                                       <label for="amount" class="ml-2">5 Year</label>                           
+                                   <!--<input type="text" class="amount" readonly style="width:100%;border:0; color:#f6931f; font-weight:bold;">-->
+                                 </span>
+                             </div>
+                             <div class="bg-mid-light p-2 text-secondary d-inline-block w-100">
+                                <span class="d-inline-block pt-2">Loan Tenure :  </span>
+                                <div class="float-right" style="width: 40%;">
+                                   <span class="btn btn-light bg-white" style="width:54%;">
+                                      <input type="text" class="amount" id="tenure" readonly style="width:100%;border:0; color:#f6931f; font-weight:bold;">
+                                   </span><span class="btn btn-primary ml-3 done" onclick="tenure();">done</span>
+                                </div>
+                             </div>
+                              
+                        </div>
+                  </div>
+
+
+                     <div class="position-relative d-inline-block">
+                           <span class="showSingle border pl-2 pr-2 pt-1 pb-1" target="4">
+                                 <small><strong><i class="fa fa-percent mr-2" aria-hidden="true"></i></strong> Interest Rate</small>
+                                 <small class="font-weight-bold" style="color: #f6931f;"><span id="showinterestrate"></span></small><i class="fa fa-angle-down ml-1" aria-hidden="true"></i>
+                              </span>
+                  <div id="div4" class="targetDiv bg-white border">
+                     
+                        <div class="p-4">   
+                           <label for="amount">10%</label><div class="slider-range price-filter-range" name="rangeInput" style="width:66%; display:inline-block;"></div><label for="amount" class="ml-3">36%</label>
+                       </div>
+                        
+                        <div class="bg-mid-light p-2 text-dark d-inline-block w-100">
+                           <small class="text-secondary" style="width: 38%;display: inline-block;">Show offers with interest rate range upto : </small>
+                           <div class="float-right" style="width: 255px;">
+                              <div class="btn btn-light bg-white" style="width:175px;">
+                                 <div>
+                                    <span style="position:relative;">
+                                          <input type="number" min=0 max="30" id="mininterestrate" oninput="validity.valid||(value='0');" class="min_price price-range-field" style="width: 55px; border: none; text-align: right; color:#f6931f; font-weight:bold;"  /><span style="position:absolute; right:3px; top: -4px; color:#f6931f; ">%</span>
+                                    </span> - 
+                                    <span style="position: relative;">
+                                          <input type="number" min=0 max="36" id="maxinterestrate" oninput="validity.valid||(value='36');" class="max_price  price-range-field" style="width: 55px; border: none; text-align: right; color:#f6931f; font-weight:bold;"  /><span style="position:absolute;right:-1px; top: -4px; color:#f6931f; ">%</span>
+                                    </span>
+                                  </div>
+                                 </div><span class="btn btn-primary ml-3 done" onclick="interestrate();">done</span>
+                           </div>
+                        </div>
+                           <span class="close">x</span>
+                        </div>
+                     </div>
+
+
+                  
+               <div class="position-relative d-inline-block">
+                     <span class="showSingle border pl-2 pr-2 pt-1 pb-1" target="5">
+                           <small><strong><i class="fa fa-plus mr-2" aria-hidden="true"></i></strong> More Filter</small>
+                           <small class="font-weight-bold" style="color: #f6931f;"><span id="showemi"></span></small><i class="fa fa-angle-down ml-1" aria-hidden="true"></i>
+                        </span>
+                        
+                  <div id="div5" class="targetDiv bg-white border">
+                        <div class="p-4">   
+                           <span class="d-block pb-2 text-secondary"><small><i class="fa fa-suitcase" aria-hidden="true"></i> I am interested in</small></span>
+                           <ul class="users text-secondary pb-4">
+                                 <li class="user p-0">
+                                   <input type="checkbox" class="checkbox" id="a">
+                                   <label for="a">
+                                     <div class="details pl-4">
+                                       <div class="title"> No pre payment fee</div>
+                                     </div>
+                                   </label>
+                                 </li>
+                               </ul>
+                           <hr>
+                           <span class="d-block pb-3 text-secondary"><small><i class="fa fa-credit-card" aria-hidden="true"></i> EMI (Monthly Fees)</small></span>
+                              <label for="amount"><i class="fa fa-inr" aria-hidden="true"></i> 5000</label><div class="slider-range1 price-filter-range" name="rangeInput" style="width:66%; display:inline-block;"></div><label for="amount" class="ml-2"><i class="fa fa-inr" aria-hidden="true"></i> 10000</label>
+                          </div>
+                           
+                           <div class="bg-mid-light p-2 text-dark d-inline-block w-100">
+                              <small class="text-secondary" style="width: 38%;display: inline-block;">Show offers with emi (monthly fees) upto : </small>
+                              <div class="float-right" style="width: 280px;">
+                                 <span class="btn btn-light bg-white" style="width:200px;">
+                                    <div>
+                                       <span style="position: relative;">
+                                             <span style=""><i class="fa fa-inr" aria-hidden="true"></i></span>
+                                             <input type="number" min="5000" id="minemi" max="9500" oninput="validity.valid||(value='0');" class="min_price1 price-range-field" style="width: 60px; border: none; text-align: right; color:#f6931f; font-weight:bold;"  />
+                                       </span>
+                                        - 
+                                        <span style="position: relative;">
+                                          <span style="" class="ml-3"><i class="fa fa-inr" aria-hidden="true"></i></span>
+                                          <input type="number" min="5000" id="maxemi" max="10000" oninput="validity.valid||(value='10000');" class="max_price1  price-range-field" style="width: 60px; border: none; text-align: right; color:#f6931f; font-weight:bold;"  />
+                                       </span>
+                                     </div>
+                                 </span><span class="btn btn-primary ml-3 done" onclick="emifilter();">done</span>
+                              </div>
+                           </div>
+                        <span class="close">x</span>
+                  </div>
+               </div>
+                  
+            </div>
+                  
+                  
+                
+               
+                  
+
+
+
+         </div>
+   </div>
+</section>
+
+      <section class="filter-bottom">
+         <div class="container">
+            <p>Compare between 40+ banks and apply for the best personal loan. Interest rates start from 10.99% p.a. Leading banks in India offer personal loans with maximum loan amount up to Rs.40 lakh and repayment tenure of up to 5 years. Check eligibility, Interest rates, Processing fees, Loan Tenure, Pre-Payment & Fore closure charges and use our EMI Calculator to calculate EMIs for the Personal Loan from best banks in India. Avail personal loan on Bankbazaar for weddings, travel, home renovation, or an emergency financial requirement.</p>
+            <div class="loan-offer-container">
+               <div class="row text-center no-gutters">
+                  <p class="heading">Best Personal Loan Interest Rates in India</p>
+                  <div class="col-4 subheading grey-border">
+                     <p class="no-border">Bank</p>
+                  </div>
+                  <div class="col-4 subheading grey-border">
+                     <p class="no-border">Interest Rate(p.a.)</p>
+                  </div>
+                  <div class="col-4 subheading grey-border">
+                     <p class="no-border">Processing Fee</p>
+                  </div>
+                  <div class="row full-width no-gutters">
+                     <div class="col-4 grey-border">
+                        <p class="no-border">Citibank</p>
+                     </div>
+                     <div class="col-4">
+                        <p class="no-border">10.99% - 18.99%</p>
+                     </div>
+                     <div class="col-4 grey-border">
+                        <p>Up to 3% (Min. Rs.999) + GST</p>
+                     </div>
+                  </div>
+                  <div class="row full-width no-gutters">
+                     <div class="col-4 grey-border">
+                        <p class="no-border">Kotak Mahindra	</p>
+                     </div>
+                     <div class="col-4 grey-border">
+                        <p class="no-border">10.50% - 16.99%</p>
+                     </div>
+                     <div class="col-4 grey-border">
+                        <p class="no-border">Up to 2.5% + GST</p>
+                     </div>
+                  </div>
+                  <div class="row full-width no-gutters">
+                     <div class="col-4 grey-border">
+                        <p class="no-border">IndusInd Bank</p>
+                     </div>
+                     <div class="col-4 grey-border">
+                        <p class="no-border">11.00% – 16.75%</p>
+                     </div>
+                     <div class="col-4 grey-border">
+                        <p class="no-border">Nil</p>
+                     </div>
+                  </div>
+                  <div class="row full-width no-gutters">
+                     <div class="col-4 grey-border">
+                        <p class="no-border">ICICI</p>
+                     </div>
+                     <div class="col-4 grey-border">
+                        <p class="no-border">11.25% - 22.00%</p>
+                     </div>
+                     <div class="col-4 grey-border">
+                        <p class="no-border">Up to 2.25% + GST</p>
+                     </div>
+                  </div>
+                  <div class="row full-width no-gutters">
+                     <div class="col-4 grey-border">
+                        <p class="no-border">HDFC</p>
+                     </div>
+                     <div class="col-4 grey-border">
+                        <p class="no-border">11.25% - 21.45%</p>
+                     </div>
+                     <div class="col-4 grey-border">
+                        <p class="no-border">Up to 2.5% (minimum Rs.2,999 and maximum Rs.25,000)</p>
+                     </div>
+                  </div>
+                  <div class="row full-width no-gutters">
+                     <div class="col-4 grey-border">
+                        <p class="no-border">Bank of Baroda</p>
+                     </div>
+                     <div class="col-4 grey-border">
+                        <p class="no-border">11.70% - 16.70%</p>
+                     </div>
+                     <div class="col-4 grey-border">
+                        <p class="no-border">Up to 2% + GST (minimum Rs.1,000 and maximum Rs.10,000)</p>
+                     </div>
+                  </div>
+                  <div class="row full-width no-gutters">
+                     <div class="col-4 grey-border">
+                        <p class="no-border">Tata Capital</p>
+                     </div>
+                     <div class="col-4 grey-border">
+                        <p class="no-border">12.99% - 19.75%</p>
+                     </div>
+                     <div class="col-4 grey-border">
+                        <p class="no-border">Nil</p>
+                     </div>
+                  </div>
+                  <div class="row full-width no-gutters">
+                     <div class="col-4 grey-border">
+                        <p class="no-border">SBI</p>
+                     </div>
+                     <div class="col-4 grey-border">
+                        <p class="no-border">12.00% - 17.05%</p>
+                     </div>
+                     <div class="col-4 grey-border">
+                        <p class="no-border">0 - 1% + GST</p>
+                     </div>
+                  </div>
+                  <div class="row full-width no-gutters">
+                     <div class="col-4 grey-border">
+                        <p class="no-border">Ujjivan Small Finance</p>
+                     </div>
+                     <div class="col-4 grey-border">
+                        <p class="no-border">16.50% - 20.00%</p>
+                     </div>
+                     <div class="col-4 grey-border">
+                        <p class="no-border">Up to 2% or Rs.2,000 (whichever is maximum)</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <p>If you are looking for a Personal Loan, Compare various banks that provide credit at attractive interest rates, easy EMI options, and low processing fees. Check for secured as well as unsecured loan options and get instant access to funds and finance your immediate needs.</p>
+            <div class="loan-offer-container">
+               <div class="row text-center no-gutters">
+                  <p class="heading">Best Instant Loans 2019</p>
+                  <div class="col-4 grey-border subheading">
+                     <p class="no-border">Lender</p>
+                  </div>
+                  <div class="col-4 grey-border subheading">
+                     <p class="no-border">Approval</p>
+                  </div>
+                  <div class="col-4 grey-border subheading">
+                     <p class="no-border">Interest Rate</p>
+                  </div>
+                  <div class="row full-width no-gutters">
+                     <div class="col-4 grey-border">
+                        <p class="no-border">PaySense</p>
+                     </div>
+                     <div class="col-4 grey-border">
+                        <p class="no-border">2 business hours</p>
+                     </div>
+                     <div class="col-4 grey-border">
+                        <p class="no-border">13% p.a. Onwards</p>
+                     </div>
+                  </div>
+                  <div class="row full-width no-gutters">
+                     <div class="col-4 grey-border">
+                        <p class="no-border">Shubh Loans	</p>
+                     </div>
+                     <div class="col-4 grey-border">
+                        <p class="no-border">24 Hours</p>
+                     </div>
+                     <div class="col-4 grey-border">
+                        <p class="no-border">25% - 32% p.a.</p>
+                     </div>
+                  </div>
+                  <div class="row full-width no-gutters">
+                     <div class="col-4 grey-border">
+                        <p>Rupeelend</p>
+                     </div>
+                     <div class="col-4 grey-border">
+                        <p class="no-border">30 mins</p>
+                     </div>
+                     <div class="col-4 grey-border">
+                        <p class="no-border">30% for 30 days</p>
+                     </div>
+                  </div>
+                  <div class="row full-width no-gutters">
+                     <div class="col-4 grey-border">
+                        <p class="no-border">CASHe</p>
+                     </div>
+                     <div class="col-4 grey-border">
+                        <p class="no-border">24 hours</p>
+                     </div>
+                     <div class="col-4 grey-border">
+                        <p class="no-border">1.75% p.m. onwards</p>
+                     </div>
+                  </div>
+                  <div class="row full-width no-gutters">
+                     <div class="col-4 grey-border">
+                        <p class="no-border">Credy	</p>
+                     </div>
+                     <div class="col-4 grey-border">
+                        <p class="no-border">1 minute</p>
+                     </div>
+                     <div class="col-4 grey-border">
+                        <p class="no-border">1% - 1.5% p.m.</p>
+                     </div>
+                  </div>
+                  <div class="row full-width no-gutters">
+                     <div class="col-4 grey-border">
+                        <p class="no-border">EarlySalary</p>
+                     </div>
+                     <div class="col-4 grey-border">
+                        <p class="no-border">24 hours</p>
+                     </div>
+                     <div class="col-4 grey-border">
+                        <p class="no-border">2.5% p.m.</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section>
+         <div class="container short-term-container">
+            <!-- accordian start-->
+            <h2 class="text-center">We found 2 Personal Loan</h2>
+            <div class="row">
+               <div class="col personal-loan">
+                  <div class="tabs">
+                     <div class="tab">
+                        <input type="checkbox" id="personalloan" name="rd">
+                        <label class="tab-label" for="personalloan">
+                           <div class="table-responsive sample-table">
+                              <table role="table">
+                                 <thead role="rowgroup">
+                                    <tr role="row">
+                                       <th role="columnheader">Bank Name</th>
+                                       <th role="columnheader">Best Rate</th>
+                                       <th role="columnheader">EMI(Monthly Fees)</th>
+                                       <th role="columnheader">Processing Fee</th>
+                                       <th role="columnheader">Savings</th>
+                                       <th role="columnheader">&nbsp;</th>
+                                    </tr>
+                                 </thead>
+                                 <tbody role="rowgroup">
+                                    <tr role="row">
+                                       <td role="cell"><span><img src="https://pbs.twimg.com/profile_images/1121403488292851713/XrMDErhB_400x400.png" class="bank-logo" /></span>ICICI Bank</td>
+                                       <td role="cell">18.00%
+                                          <span>Fixed</span>                                       
+                                       </td>
+                                       <td role="cell"> 5,492
+                                          <span>Monthly for 2 years</span>
+                                       </td>
+                                       <td role="cell">3,894
+                                          <span>One time fee</span>
+                                       </td>
+                                       <td role="cell">2,568
+                                          <span>On EMI & processing fee</span>
+                                       </td>
+                                       <td role="cell">
+                                             <a href="personal-loan-detail.html" class="btn btn-warning">Read More</a>
+                                             <a href="../check-eligibility.html" class="btn btn-primary">Apply</a>
+                                             <span>
+                                                <ul class="ks-cboxtags">
+                                                      <li><input type="checkbox" id="checkboxOne" value="" class="chkPassport"><label for="checkboxOne">Add to Compare</label></li>
+                                                </ul>
+                                          </span>
+                                       </td>
+                                    </tr>
+                                 </tbody>
+                              </table>
+                           </div>
+                        </label>
+                        <div class="tab-content">
+                           <div class="citylist per-con">
+                              <ul class="card-columns" style="column-count: 2;">
+                                 <span class="heading">What you'll love</span>
+                                 <li>No income documents required</li>
+                                 <li>Instant short-term loans from  1 lakhs to  5 lakhs</li>
+                                 <li>Quick approval and disbursal</li>
+                                 <li>Affordable EMI plans</li>
+                                 <li>No hidden fees or charges</li>
+                                 <span class="heading">Documents</span>
+                                 <li>KYC-PAN, current address &amp; ID proof</li>
+                                 <li>One photograph</li>
+                                 <span class="heading">Perks</span>
+                                 <li>No guarantor required</li>
+                                 <span class="heading">Think about</span>
+                                 <li>App download required</li>
+                                 <span class="heading">Fees &amp; Charges</span>
+                                 <li>Preclosure fee = 4% on principal outstanding. Allowed only after first 3 EMIs</li>
+                                 <li>Late payment fee =  500 + GST</li>
+                                 <span class="heading">Good to Know</span>
+                                 <li>Branches</li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="tab">
+                        <input type="checkbox" id="personalloan1" name="rd">
+                        <label class="tab-label" for="personalloan1">
+                           <div class="table-responsive sample-table">
+                              <table role="table">
+                                 <thead role="rowgroup">
+                                    <tr role="row">
+                                       <th role="columnheader">Bank Name</th>
+                                       <th role="columnheader">Best Rate</th>
+                                       <th role="columnheader">EMI(Monthly Fees)</th>
+                                       <th role="columnheader">Processing Fee</th>
+                                       <th role="columnheader">Savings</th>
+                                       <th role="columnheader">&nbsp;</th>
+                                    </tr>
+                                 </thead>
+                                 <tbody role="rowgroup">
+                                    <tr role="row">
+                                       <td role="cell"><span><img src="https://content.jdmagicbox.com/comp/patna/b5/0612px612.x612.120404145329.q6b5/catalogue/hdfc-bank-ltd-customer-care--patna-customer-care-qyiew.jpg" class="bank-logo" /></span>HDFC Bank</td>
+                                       <td role="cell">18.00%
+                                          <span>Fixed</span>                                       
+                                       </td>
+                                       <td role="cell"> 5,492
+                                          <span>Monthly for 2 years</span>
+                                       </td>
+                                       <td role="cell">3,894
+                                          <span>One time fee</span>
+                                       </td>
+                                       <td role="cell">2,568
+                                          <span>On EMI & processing fee</span>
+                                       </td>
+                                       <td role="cell"><a href="personal-loan-detail.html" class="btn btn-primary">Read More</a></td>
+                                    </tr>
+                                 </tbody>
+                              </table>
+                           </div>
+                        </label>
+                        <div class="tab-content">
+                           <div class="citylist per-con">
+                              <ul class="card-columns" style="column-count: 2;">
+                                 <span class="heading">What you'll love</span>
+                                 <li>No income documents required</li>
+                                 <li>Instant short-term loans from  1 lakhs to  5 lakhs</li>
+                                 <li>Quick approval and disbursal</li>
+                                 <li>Affordable EMI plans</li>
+                                 <li>No hidden fees or charges</li>
+                                 <span class="heading">Documents</span>
+                                 <li>KYC-PAN, current address &amp; ID proof</li>
+                                 <li>One photograph</li>
+                                 <span class="heading">Perks</span>
+                                 <li>No guarantor required</li>
+                                 <span class="heading">Think about</span>
+                                 <li>App download required</li>
+                                 <span class="heading">Fees &amp; Charges</span>
+                                 <li>Preclosure fee = 4% on principal outstanding. Allowed only after first 3 EMIs</li>
+                                 <li>Late payment fee =  500 + GST</li>
+                                 <span class="heading">Good to Know</span>
+                                 <li>Branches</li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         </div>
+      </section>
+      <section>
+         <div class="container">
+            <p>*The calculation of EMI's and total amount payable is done assuming the loan amount to be Rs.1 Lakh and is taken for the Tenure of 5 years. Please note that interest rates vary depending on the income of the applicant and the amount borrowed.</p>
+            <div class="loan-offer-container">
+               <div class="row text-center no-gutters">
+                  <p class="heading">Personal Loan Eligibility</p>
+                  <div class="col-4 subheading grey-border">
+                     <p class="no-border">Criteria</p>
+                  </div>
+                  <div class="col-4 subheading grey-border">
+                     <p class="no-border">Salaried</p>
+                  </div>
+                  <div class="col-4 subheading grey-border">
+                     <p class="no-border">Self-Employed</p>
+                  </div>
+                  <div class="row full-width no-gutters">
+                     <div class="col-4 grey-border">
+                        <p class="no-border">Age</p>
+                     </div>
+                     <div class="col-4 grey-border">
+                        <p class="no-border">21 years to 60 years</p>
+                     </div>
+                     <div class="col-4 grey-border">
+                        <p class="no-border">22 years to 55 years</p>
+                     </div>
+                  </div>
+                  <div class="row full-width no-gutters">
+                     <div class="col-4 grey-border">
+                        <p class="no-border">Net Monthly Income	</p>
+                     </div>
+                     <div class="col-4 grey-border">
+                        <p class="no-border">Rs.15,000</p>
+                     </div>
+                     <div class="col-4 grey-border">
+                        <p class="no-border">Rs.25,000</p>
+                     </div>
+                  </div>
+                  <div class="row full-width no-gutters">
+                     <div class="col-4 grey-border">
+                        <p class="no-border">CIBIL Score</p>
+                     </div>
+                     <div class="col-4 grey-border">
+                        <p class="no-border">Above 750</p>
+                     </div>
+                     <div class="col-4 grey-border">
+                        <p class="no-border">Above 750</p>
+                     </div>
+                  </div>
+                  <div class="row full-width no-gutters">
+                     <div class="col-4 grey-border">
+                        <p class="no-border">Minimum Loan Amount</p>
+                     </div>
+                     <div class="col-4 grey-border">
+                        <p class="no-border">Rs.50,000</p>
+                     </div>
+                     <div class="col-4 grey-border">
+                        <p class="no-border">Rs.50,000</p>
+                     </div>
+                  </div>
+                  <div class="row full-width no-gutters">
+                     <div class="col-4 grey-border">
+                        <p class="no-border">Maximum Loan Amount</p>
+                     </div>
+                     <div class="col-4 grey-border">
+                        <p class="no-border">Rs.25 lakh</p>
+                     </div>
+                     <div class="col-4 grey-border">
+                        <p class="no-border">Rs.30 lakh</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="loan-offer-container">
+               <div class="row text-center no-gutters">
+                  <p class="heading">Documents Required for Personal Loan</p>
+                  <div class="col-4 grey-border subheading">
+                     <p class="no-border">Requirements</p>
+                  </div>
+                  <div class="col-4 grey-border subheading">
+                     <p class="no-border">Salaried Individuals</p>
+                  </div>
+                  <div class="col-4 grey-border subheading">
+                     <p class="no-border">Self Employed</p>
+                  </div>
+                  <div class="row full-width no-gutters">
+                     <div class="col-4 grey-border">
+                        <p class="no-border">Proof of Identity</p>
+                     </div>
+                     <div class="col-4 grey-border">
+                        <p class="no-border">Passport, Voter’s ID, Driving License or PAN Card</p>
+                     </div>
+                     <div class="col-4 grey-border">
+                        <p class="no-border">Passport, Voter’s ID, Driving License or PAN Card</p>
+                     </div>
+                  </div>
+                  <div class="row full-width no-gutters">
+                     <div class="col-4 grey-border">
+                        <p>Proof of Residence	</p>
+                     </div>
+                     <div class="col-4 grey-border">
+                        <p>Passport or utility bills</p>
+                     </div>
+                     <div class="col-4 grey-border">
+                        <p>Passport or utility bills</p>
+                     </div>
+                  </div>
+                  <div class="row full-width no-gutters">
+                     <div class="col-4 grey-border">
+                        <p>Proof of Income</p>
+                     </div>
+                     <div class="col-4 grey-border">
+                        <p>Bank statement of salary account for the past two years</p>
+                     </div>
+                     <div class="col-4 grey-border">
+                        <p>Audited financial statement of the past two years</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section>
+         <div class="container">
+            <p>If you are looking for a Personal Loan, Compare various banks that provide credit at attractive interest rates, easy EMI options, and low processing fees. Check for secured as well as unsecured loan options and get instant access to funds and finance your immediate needs.</p>
+            <div class="loan-offer-container">
+               <div class="row text-center no-gutters">
+                  <p class="heading">Best Personal Loan Offers 2019</p>
+                  <div class="col-6 subheading grey-border">
+                     <p>Bank</p>
+                  </div>
+                  <div class="col-6 subheading grey-border">
+                     <p>Best for</p>
+                  </div>
+                  <div class="row full-width no-gutters">
+                     <div class="col-6 grey-border">
+                        <p>Standard Chartered</p>
+                     </div>
+                     <div class="col-6 grey-border">
+                        <p>Short Term</p>
+                     </div>
+                  </div>
+                  <div class="row full-width no-gutters">
+                     <div class="col-6 grey-border">
+                        <p>Citibank	</p>
+                     </div>
+                     <div class="col-6 grey-border">
+                        <p>Low Interest Rate</p>
+                     </div>
+                  </div>
+                  <div class="row full-width no-gutters">
+                     <div class="col-6 grey-border">
+                        <p>HDFC Bank</p>
+                     </div>
+                     <div class="col-6 grey-border">
+                        <p>Self Employed Professionals</p>
+                     </div>
+                  </div>
+                  <div class="row full-width no-gutters">
+                     <div class="col-6 grey-border">
+                        <p>Kotak Mahindra Bank</p>
+                     </div>
+                     <div class="col-6 grey-border">
+                        <p>Quick Turnaround Time</p>
+                     </div>
+                  </div>
+                  <div class="row full-width no-gutters">
+                     <div class="col-6 grey-border">
+                        <p>TATA Capital</p>
+                     </div>
+                     <div class="col-6 grey-border">
+                        <p>Flexible Interest Rates</p>
+                     </div>
+                  </div>
+                  <div class="row full-width no-gutters">
+                     <div class="col-6 grey-border">
+                        <p>Capital First</p>
+                     </div>
+                     <div class="col-6 grey-border">
+                        <p>Top-up Loans</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <p>If you are looking for a Personal Loan, Compare various banks that provide credit at attractive interest rates, easy EMI options, and low processing fees. Check for secured as well as unsecured loan options and get instant access to funds and finance your immediate needs.</p>
+            <div class="loan-offer-container">
+               <div class="row text-center no-gutters">
+                  <p class="heading">Best Instant Loans 2019</p>
+                  <div class="col-4 grey-border subheading">
+                     <p>Lender</p>
+                  </div>
+                  <div class="col-4 grey-border subheading">
+                     <p>Approval</p>
+                  </div>
+                  <div class="col-4 grey-border subheading">
+                     <p>Interest Rate</p>
+                  </div>
+                  <div class="row full-width no-gutters">
+                     <div class="col-4 grey-border">
+                        <p>PaySense</p>
+                     </div>
+                     <div class="col-4 grey-border">
+                        <p>2 business hours</p>
+                     </div>
+                     <div class="col-4 grey-border">
+                        <p>13% p.a. Onwards</p>
+                     </div>
+                  </div>
+                  <div class="row full-width no-gutters">
+                     <div class="col-4 grey-border">
+                        <p>Shubh Loans	</p>
+                     </div>
+                     <div class="col-4 grey-border">
+                        <p>24 Hours</p>
+                     </div>
+                     <div class="col-4 grey-border">
+                        <p>25% - 32% p.a.</p>
+                     </div>
+                  </div>
+                  <div class="row full-width no-gutters">
+                     <div class="col-4 grey-border">
+                        <p>Rupeelend</p>
+                     </div>
+                     <div class="col-4 grey-border">
+                        <p>30 mins</p>
+                     </div>
+                     <div class="col-4 grey-border">
+                        <p>30% for 30 days</p>
+                     </div>
+                  </div>
+                  <div class="row full-width no-gutters">
+                     <div class="col-4 grey-border">
+                        <p>CASHe</p>
+                     </div>
+                     <div class="col-4 grey-border">
+                        <p>24 hours</p>
+                     </div>
+                     <div class="col-4 grey-border">
+                        <p>1.75% p.m. onwards</p>
+                     </div>
+                  </div>
+                  <div class="row full-width no-gutters">
+                     <div class="col-4 grey-border">
+                        <p>Credy	</p>
+                     </div>
+                     <div class="col-4 grey-border">
+                        <p>1 minute</p>
+                     </div>
+                     <div class="col-4 grey-border">
+                        <p>1% - 1.5% p.m.</p>
+                     </div>
+                  </div>
+                  <div class="row full-width no-gutters">
+                     <div class="col-4 grey-border">
+                        <p>EarlySalary</p>
+                     </div>
+                     <div class="col-4 grey-border">
+                        <p>24 hours</p>
+                     </div>
+                     <div class="col-4 grey-border">
+                        <p>2.5% p.m.</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section>
+         <div class="container short-term-container">
+            <div class="row full-width grey-border margin-20">
+               <p class="heading">Best Instant Loans 2019</p>
+               <div class="col-md-4 text-center"><img src="https://www.bankbazaar.com/images/india/personal-loan/standard-chartered-personal-loan.png" />
+                  <span><a href="../check-eligibility.html" class="btn submit-btn" style="color: #fff;">Check Eligibility</a></span>
+               </div>
+               <div class="col-md-8">
+                  <p class="subheading">Key Highlights</p>
+                  <ul>
+                     <li><i class="fa fa-chevron-right small-font mr-1" aria-hidden="true"></i> Attractive Interest rates</li>
+                     <li><i class="fa fa-chevron-right small-font mr-1" aria-hidden="true"></i> Get Instant approval when you apply online</li>
+                     <li><i class="fa fa-chevron-right small-font mr-1" aria-hidden="true"></i> Flexible repayment tenures extending up to 60 months</li>
+                  </ul>
+                  <div class="table-responsive sample-table">
+                     <table role="table">
+                        <thead role="rowgroup">
+                           <tr role="row">
+                              <th role="columnheader">Interest Rate</th>
+                              <th role="columnheader">EMI</th>
+                              <th role="columnheader">Foreclosure / Prepayment Charges</th>
+                              <th role="columnheader">Repayment</th>
+                           </tr>
+                        </thead>
+                        <tbody role="rowgroup">
+                           <tr role="row">
+                              <td role="cell">10.89% onwards</td>
+                              <td role="cell">Rs.2,169</td>
+                              <td role="cell">5% of principal outstanding as per reducing balance method on the date of repayment</td>
+                              <td role="cell">Rs.1,30,126</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+            </div>
+            <div class="row full-width grey-border margin-20">
+               <p class="heading">Citibank – Best for Low Interest Rate</p>
+               <div class="col-md-4 text-center"><img src="https://www.bankbazaar.com/images/india/personal-loan/citibank-personal-loan.png" />
+                  <span><a href="../check-eligibility.html" class="btn submit-btn" style="color: #fff;">Check Eligibility</a></span>
+               </div>
+               <div class="col-md-8">
+                  <p class="subheading">Key Highlights</p>
+                  <ul>
+                     <li><i class="fa fa-chevron-right small-font mr-1" aria-hidden="true"></i> Low Interest rates for Salaried as well as Self-employed applicants</li>
+                     <li><i class="fa fa-chevron-right small-font mr-1" aria-hidden="true"></i> Funds will be credited to your bank account within 48 hours</li>
+                     <li><i class="fa fa-chevron-right small-font mr-1" aria-hidden="true"></i> Minimal documentation and Instant approval for existing Citibank customers</li>
+                  </ul>
+                  <div class="table-responsive sample-table">
+                     <table role="table">
+                        <thead role="rowgroup">
+                           <tr role="row">
+                              <th role="columnheader">Interest Rate</th>
+                              <th role="columnheader">EMI</th>
+                              <th role="columnheader">Foreclosure / Prepayment Charges</th>
+                              <th role="columnheader">Repayment</th>
+                           </tr>
+                        </thead>
+                        <tbody role="rowgroup">
+                           <tr role="row">
+                              <td role="cell">10.89% onwards</td>
+                              <td role="cell">Rs.2,169</td>
+                              <td role="cell">5% of principal outstanding as per reducing balance method on the date of repayment</td>
+                              <td role="cell">Rs.1,30,126</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section>
+         <div class="container">
+         <p>If you are an NRI looking to borrow a personal loan, these are the documents that you will need to submit to the lender: </p>
+         <div class="loan-offer-container no-border">
+            <ul>
+               <li><i class="fa fa-chevron-right small-font mr-1" aria-hidden="true"></i> Copy of your Passport</li>
+               <li><i class="fa fa-chevron-right small-font mr-1" aria-hidden="true"></i> Visa Copy</li>
+               <li><i class="fa fa-chevron-right small-font mr-1" aria-hidden="true"></i> Your official Email ID or the Email ID of the HR</li>
+               <li><i class="fa fa-chevron-right small-font mr-1" aria-hidden="true"></i> Bank Statements</li>
+               <li><i class="fa fa-chevron-right small-font mr-1" aria-hidden="true"></i> Salary Certificate or salary slips</li>
+               <li><i class="fa fa-chevron-right small-font mr-1" aria-hidden="true"></i> NRO/NRE bank statements of the last 6 Months</li>
+               <li><i class="fa fa-chevron-right small-font mr-1" aria-hidden="true"></i> Proof of Identity, Residence, Income, and Assets</li>
+               <li><i class="fa fa-chevron-right small-font mr-1" aria-hidden="true"></i> Recent passport-size Photographs of yourself and the guarantors </li>
+            </ul>
+         </div>
+      </section>
+      <section>
+         <div class="container">
+         <p class="p-heading">Features and Benefits of Personal Loan: </p>
+         <div class="loan-offer-container no-border">
+            <ul>
+               <li><i class="fa fa-chevron-right small-font mr-1" aria-hidden="true"></i> Borrow up to Rs.40 lakh, if not more.</li>
+               <li><i class="fa fa-chevron-right small-font mr-1" aria-hidden="true"></i> Opt for a loan tenure of up to 5 years and repay your loan in easy instalments.</li>
+               <li><i class="fa fa-chevron-right small-font mr-1" aria-hidden="true"></i> Submit your application through online or offline channels.</li>
+               <li><i class="fa fa-chevron-right small-font mr-1" aria-hidden="true"></i> Minimal paperwork and documentation required.</li>
+               <li><i class="fa fa-chevron-right small-font mr-1" aria-hidden="true"></i> No restrictions on how the loan amount can be used.</li>
+               <li><i class="fa fa-chevron-right small-font mr-1" aria-hidden="true"></i> Affordable interest rates ranging between 10% p.a. and 24% p.a.</li>
+               <li><i class="fa fa-chevron-right small-font mr-1" aria-hidden="true"></i> Helps in consolidation of debts.</li>
+               <li><i class="fa fa-chevron-right small-font mr-1" aria-hidden="true"></i> Quick approval. </li>
+               <li><i class="fa fa-chevron-right small-font mr-1" aria-hidden="true"></i> Pre-approved loan offers. </li>
+            </ul>
+         </div>
+      </section>
+      <section class="cal-bg">
+         <div class="container">
+            <div class="loan-offer-container text-center no-border">
+               <p class="large-font no-border">Use BankBazaar Personal Loan EMI Calculator to Calculate EMI</p>
+               <p class="no-border">Calculate personal loan EMIs to understand how much money you will every month for repaying the loan.</p>
+               <div class="btn btn-primary">Personal Loan Emi Calculator</div>
+            </div>
+         </div>
+      </section>
+      <section>
+         <div class="container">
+         <p class="p-heading">Tips for Successful Personal Loan Application</p>
+         <div class="loan-offer-container no-border">
+            <ul>
+               <li><i class="fa fa-chevron-right small-font mr-1" aria-hidden="true"></i> Assess the need for your personal loan</li>
+               <li><i class="fa fa-chevron-right small-font mr-1" aria-hidden="true"></i> Do proper research to get the best rate for your personal loan</li>
+               <li><i class="fa fa-chevron-right small-font mr-1" aria-hidden="true"></i> Check your credit history</li>
+               <li><i class="fa fa-chevron-right small-font mr-1" aria-hidden="true"></i> Review the fine print on your loan document carefully</li>
+               <li><i class="fa fa-chevron-right small-font mr-1" aria-hidden="true"></i> Choose your personal loan tenure by assessing your repayment ability</li>
+               <li><i class="fa fa-chevron-right small-font mr-1" aria-hidden="true"></i> Choose an affordable interest rate</li>
+               <li><i class="fa fa-chevron-right small-font mr-1" aria-hidden="true"></i> Select your personal loan amount as per your convenience</li>
+               <li><i class="fa fa-chevron-right small-font mr-1" aria-hidden="true"></i> Check your EMIs properly</li>
+               <li><i class="fa fa-chevron-right small-font mr-1" aria-hidden="true"></i> Compare the processing fee</li>
+               <li><i class="fa fa-chevron-right small-font mr-1" aria-hidden="true"></i> Select fixed or variable interest rate according to your preference</li>
+            </ul>
+         </div>
+      </section>
+      <section>
+         <div class="container">
+            <div class="loan-offer-container">
+               <div class="row text-center no-gutters">
+                  <div class="col-6 subheading grey-border">
+                     <p>Do's</p>
+                  </div>
+                  <div class="col-6 subheading grey-border">
+                     <p>Don'ts</p>
+                  </div>
+                  <div class="row full-width no-gutters">
+                     <div class="col-6 grey-border">
+                        <p>Do proper research before you apply for a personal loan	</p>
+                     </div>
+                     <div class="col-6 grey-border">
+                        <p>Do not sign your loan documents without understanding every point</p>
+                     </div>
+                  </div>
+                  <div class="row full-width no-gutters">
+                     <div class="col-6 grey-border">
+                        <p>Do read the fine print carefully</p>
+                     </div>
+                     <div class="col-6 grey-border">
+                        <p>Do not make multiple inquiries regarding personal loans from different banks</p>
+                     </div>
+                  </div>
+                  <div class="row full-width no-gutters">
+                     <div class="col-6 grey-border">
+                        <p>Do save your money carefully when you are repaying</p>
+                     </div>
+                     <div class="col-6 grey-border">
+                        <p>Do not take a personal loan without any serious purpose</p>
+                     </div>
+                  </div>
+                  <div class="row full-width no-gutters">
+                     <div class="col-6 grey-border">
+                        <p>Do pay your loan instalment promptly every single time</p>
+                     </div>
+                     <div class="col-6 grey-border">
+                        <p>Do not be in a hurry to end your loan comparison process</p>
+                     </div>
+                  </div>
+                  <div class="row full-width no-gutters">
+                     <div class="col-6 grey-border">
+                        <p>Do evaluate your credit score thoroughly	</p>
+                     </div>
+                     <div class="col-6 grey-border">
+                        <p>Do not forget to pay your loan instalments</p>
+                     </div>
+                  </div>
+                  <div class="row full-width no-gutters">
+                     <div class="col-6 grey-border">
+                        <p>Do apply for an affordable loan amount</p>
+                     </div>
+                     <div class="col-6 grey-border">
+                        <p>Do not accept bad personal loan products</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section>
+         <div class="container">
+         <p class="p-heading">Different Types of Personal Loans in India</p>
+         <div class="loan-offer-container no-border">
+            <p class="no-border">Usually, a personal loan is not restricted in terms of its utilisation. That is, you can use your personal loan for any purpose as long as it is legal. However, there are certain lenders who provide different loan products on the basis of the purpose which is mentioned by the borrower in the personal loan application. On the basis of utilisation, these are the different types of personal loans which can be availed in India:</p>
+            <ul>
+               <li><i class="fa fa-chevron-right small-font mr-1" aria-hidden="true"></i> <b><a href="marriage-loan.html">Personal Loan for Wedding:</a></b> As the name suggests, a personal loan which is offered particularly for the purpose of meeting the expenses of a wedding is a wedding loan.</li>
+               <li><i class="fa fa-chevron-right small-font mr-1" aria-hidden="true"></i> <b><a href="home-improvement-loan.html">Personal Loan for home Renovation:</a></b> A home renovation loan is a personal loan which can be availed to meet the expenses of repairing or renovating your home.</li>
+               <li><i class="fa fa-chevron-right small-font mr-1" aria-hidden="true"></i> <b><a href="vacation-loan.html">Personal Loan for Vacations:</a></b> A holiday loan is a personal loan which is especially designed for vacations. You can avail a personal loan for your vacation and pay the expenses on a later date through easy EMIs.</li>
+               <li><i class="fa fa-chevron-right small-font mr-1" aria-hidden="true"></i> <b><a href="pensioners-loan.html">Personal Loan for Pensioners:</a></b> A personal loan which is specifically offered to pensioners is known as a pension loan.</li>
+               <li><i class="fa fa-chevron-right small-font mr-1" aria-hidden="true"></i> <b><a href="festival-loan.html">Personal Loan for Festivals:</a></b> Certain lenders offer a personal loan exclusively for festivals. If you are looking for a loan to make arrangements for a festival, you can apply for a festival loan.</li>
+            </ul>
+            <p>Do not forget to check the eligibility criteria for the <a href="#">different types of personal loans</a> before you apply for one.</p>
+         </div>
+      </section>
+      <section class="cal-bg">
+         <div class="container">
+         <p class="p-heading">How to Improve your Chances of Getting a Personal Loan?</p>
+         <div class="loan-offer-container no-border">
+            <ul>
+               <li><i class="fa fa-chevron-right small-font mr-1" aria-hidden="true"></i> <b>Credit Clean-up:</b> One of the main factors taken into consideration by lenders is your credit score. Getting a personal loan is easier with a high credit score. If your score is low, you must check your reports to see if there are any errors. Sometimes, simple errors could have an adverse effect on your scores, and if you find any of these, you must report them to CIBIL.</li>
+               <li><i class="fa fa-chevron-right small-font mr-1" aria-hidden="true"></i> <b>Rebalancing your income and debts:</b> Lenders ask for proof of income when you apply for personal loans in order to ascertain your debt-to-income ratio. Consider the sale of liquid assets like stocks or earning more through a part-time job to increase your annual income. Doing so will increase your debt-to-income ratio and increase your chances of getting a personal loan.</li>
+               <li><i class="fa fa-chevron-right small-font mr-1" aria-hidden="true"></i> <b>Consider Co-signers/Guarantors: </b>Consider Co-signers/Guarantors: If you are finding it hard to get a personal loan on your own accord, you can apply for one by adding a co-signer or guarantor. The person you choose as a guarantor must have a good credit score. Their main aim is to guarantee that you will repay the loan. However, they will also be liable to repay the loan themselves if you are unable to do so. Picking an individual with a credit score over 750 will considerably increase your chances of getting a personal loan.</li>
+               <li><i class="fa fa-chevron-right small-font mr-1" aria-hidden="true"></i> <b>Limit Your Borrowing: </b>It can be risky to ask for more money than you require to meet your financial targets. Make sure that you calculate how much you need and apply only for that specific amount.</li>
+               <li><i class="fa fa-chevron-right small-font mr-1" aria-hidden="true"></i> <b>Choose the Right Lender:</b> Every lender has their own requirements when it comes to credit scores and income. When looking for personal loans, pick a lender whose eligibility criteria you meet and apply accordingly. The problem with applying with multiple lenders is that each of them will check your credit score, and each time your full credit report is pulled out, your credit score drops, albeit marginally.</li>
+            </ul>
+         </div>
+      </section>
+      <section>
+         <div class="loan-offer-container container no-border">
+         <p class="p-heading no-border">Pre-Payment and Part Payment of Personal Loan</p>
+         <div class="loan-offer-container no-border">
+            <p class="no-border">A personal loan is given for a stipulated time period. This period is known as the loan repayment tenure. After you have taken a loan, you are expected to pay the debt off by the end of the loan repayment tenure through EMIs. However, after availing a personal loan, if you decide to pay off your debt before the end of the loan repayment period, it is called pre-payment or foreclosure.</p>
+            <p class="p-heading no-border">Types of Pre-Payment:</p>
+            <p class="no-border">There are 2 types of pre-payment. They are – full pre-payment and part pre-payment or just part payment.</p>
+            <p class="p-heading no-border">1. Full Pre-Payment:</p>
+            <p class="no-border">If you are paying off the whole outstanding loan amount before the end of the loan repayment tenure, it is known as full pre-payment.</p>
+            <p class="p-heading no-border">Advantages of full pre-payment:</p>
+            <ul>
+               <li><i class="fa fa-chevron-right small-font mr-1" aria-hidden="true"></i> You can avoid paying hefty interest on your loan amount.</li>
+               <li><i class="fa fa-chevron-right small-font mr-1" aria-hidden="true"></i> You can avoid paying pre-payment interest as well, if you have taken the loan from a lender who does not charge an interest on pre-payment of the loan.</li>
+               <li><i class="fa fa-chevron-right small-font mr-1" aria-hidden="true"></i> If you have the money to pay off your debt completely, you might as well get rid of the debt.</li>
+            </ul>
+            <p class="p-heading no-border">Disadvantages of Full Pre-Payment:</p>
+            <ul>
+               <li><i class="fa fa-chevron-right small-font mr-1" aria-hidden="true"></i> If your lender charges a penalty on pre-payment of the loan amount, you might have to pay a big chunk of money for pre-paying your loan.</li>
+               <li><i class="fa fa-chevron-right small-font mr-1" aria-hidden="true"></i> Before you foreclose a personal loan, check the other factors related to it. Foreclosing a personal loan means that you would be paying out a huge sum of money at once. This might not always be the best option.</li>
+            </ul>
+            <p class="p-heading no-border">2. Part pre-payment:</p>
+            <p class="no-border">If you are paying off the whole outstanding loan amount before the end of the loan repayment tenure, it is known as full pre-payment.</p>
+            <p class="p-heading no-border">Advantages of part pre-payment:</p>
+            <ul>
+               <li><i class="fa fa-chevron-right small-font mr-1" aria-hidden="true"></i> You can avoid paying hefty interest on your loan amount.</li>
+               <li><i class="fa fa-chevron-right small-font mr-1" aria-hidden="true"></i> You can avoid paying pre-payment interest as well, if you have taken the loan from a lender who does not charge an interest on pre-payment of the loan.</li>
+               <li><i class="fa fa-chevron-right small-font mr-1" aria-hidden="true"></i> If you have the money to pay off your debt completely, you might as well get rid of the debt.</li>
+            </ul>
+            <p class="p-heading no-border">Disadvantages of part pre-payment:</p>
+            <ul>
+               <li><i class="fa fa-chevron-right small-font mr-1" aria-hidden="true"></i> You can avoid paying hefty interest on your loan amount.</li>
+               <li><i class="fa fa-chevron-right small-font mr-1" aria-hidden="true"></i> You can avoid paying pre-payment interest as well, if you have taken the loan from a lender who does not charge an interest on pre-payment of the loan.</li>
+               <li><i class="fa fa-chevron-right small-font mr-1" aria-hidden="true"></i> If you have the money to pay off your debt completely, you might as well get rid of the debt.</li>
+            </ul>
+         </div>
+      </section>
+      <section class="">
+         <div class="loan-offer-container container no-border">
+            <p class="p-heading no-border">Other Fees & Charges related to Personal Loan</p>
+            <ul>
+               <li><i class="fa fa-chevron-right small-font mr-1" aria-hidden="true"></i> Processing fee</li>
+               <li><i class="fa fa-chevron-right small-font mr-1" aria-hidden="true"></i> Goods and Services Tax or GST</li>
+               <li><i class="fa fa-chevron-right small-font mr-1" aria-hidden="true"></i> Verification charges</li>
+               <li><i class="fa fa-chevron-right small-font mr-1" aria-hidden="true"></i> Charges levied for issuing duplicate statement</li>
+               <li><i class="fa fa-chevron-right small-font mr-1" aria-hidden="true"></i> Penalty for defaults</li>
+               <li><i class="fa fa-chevron-right small-font mr-1" aria-hidden="true"></i> Penalty for pre-payment and part payment of loan</li>
+            </ul>
+            <p class="no-border">
+               In addition to these, the lenders might also levy charges for documentation, stamping, credit administration, collection, and so on. The levy and the rates of these fees and charges differ from lender to lender. However, you can check the fees and charges which are levied by the top lenders in India before you apply for a personal loan.
+            </p>
+         </div>
+      </section>
+      <section>
+         <div class="loan-offer-container container no-border">
+            <p class="p-heading no-border">Things to do After Closing a Personal Loan?</p>
+            <p class="no-border">If you have recently paid off your personal loan (either repaid or foreclosed), you might have the idea that your obligation towards the loan is over. However, that is not the case. There are certain things that you should do after paying off your personal loan.</p>
+            <ul>
+               <li><b>The No Dues Certificate or NDC:</b> The No Dues Certificate or NDC is issued by your lender once you pay off the debt. This is one of the most important documents that you should collect immediately after paying off your loan. It is also a wise decision to retain this document for an extended period of time. This certificate validates the repayment that you have made. Without this document you cannot prove that you have paid off your debts. In case you are looking forward to taking another loan in the near future, you will need this document to prove that your previous loan has been paid off. Usually, this document is issued on spot by your lender if you are paying off the final amount through hard cash. If you are paying via check or NEFT or any other means, the lender will issue the NDC and will either send it to your registered address or will ask you to collect it from the branch office of the lender.</li>
+               <li><b>The Statement of Account or SoA: </b>The Statement of Account or SoA, along with the NDC will help you prove that your debts have been completely paid off and have been paid on time. This is an optional document which is often issued by certain lenders. If your lender provides this document, you should consider getting it. However, you should also look for any sorts of discrepancies in the credit score. If you find something wrong, you can use the SoA to make the necessary changes to it.</li>
+               <li><b>Collection of unused cheques:</b> If you have some cheque leaves which have not been used, you should collect those as well. The collection of the No Dues Certificate and the unused cheque leaves, usually, marks the end of the closure process for the loan.</li>
+               <li><b>Check your credit score after closing the loan:</b> This is just a recommendation. It is not compulsory to check the credit score after the closure process ends. However, it is recommended that you check the score to make sure there are no differences in the score. If there are some chances of you availing another loan within 1 to 2 years of the closure of the current loan, it is highly recommended that you check the credit scores right after the closure of the loan.</li>
+            </ul>
+         </div>
+      </section>
+      <section>
+         <div class="loan-offer-container container no-border">
+            <p class="p-heading no-border">Modes of Personal Loan Payment or Repayment</p>
+            <p class="no-border">There are a number of repayment modes which are offered by lenders. Although these modes might differ from lender to lender, the most common modes of repayment can be summed up as follows:</p>
+            <ul>
+               <li><b>Electronic Clearance System or ECS: </b> The ECS or Electronic Clearance System is one of the most commonly used repayment methods. It is an electronic mode through which funds are transferred from one bank to another.</li>
+               <li><b>Post Dated Cheques or PDCs:</b> Post Dated Cheques, as the name suggests, are cheques which are issued by you for a future date. The lender will use these cheques on the mentioned date to deposit or encash the amount mentioned on it.</li>
+               <li><b>National Automated Clearing House:</b> The National Payment Corporation of India (NPCI) offers a program called NACH to all the banks and financial institutions. The NACH allows the processing of transactions in real time. This method can be used for your loan repayments.</li>
+               <li><b>Debit mandate or standing instruction:</b> You can give an instruction to your bank to pay off a particular amount of money to another bank or bank account at a regular interval. This is known as standing instruction or debit mandate. Your bank will be paying off the stipulated amount towards the repayment of your loan on a regular basis through this system.</li>
+            </ul>
+         </div>
+      </section>
+      <section>
+         <div class="loan-offer-container container no-border">
+            <p class="p-heading no-border">How to Check Personal Loan Status?</p>
+            <p class="no-border">There are two main modes of checking the status of your personal loan application. Most lenders offer both online and offline modes through which you can keep tracking your personal loan status.</p>
+            <ul>
+               <li><b>1. Online Mode:</b> Most lenders offer the option of logging in to their official portal to help you track the status of your loan application. You can use the application number or reference number which is issued by the lender for this purpose. On the other hand, if you have applied for a personal loan through a third-party aggregator website such as BankBazaar, you can just log in to its web portal and track the status of your personal loan application directly.</li>
+               <li><b>2. Offline Mode:</b> If you are not comfortable using the online platform, you can also track the status of your personal loan application through the offline means. You can visit the branch office of your loan provider and check the status of your loan application. On the other hand, you can also connect with your lender over the telephone through their helpline or customer care number.</li>
+            </ul>
+            <p class="no-border">For both these methods, you would be required to provide a few basic details such as your name and the application number or reference number. Head to BankBazaar to know more about <a href="#">how to track your personal loan status</a></p>
+         </div>
+      </section>
+      <section>
+         <div class="loan-offer-container container no-border">
+            <p class="p-heading no-border">How to Get Personal Loan Statement?</p>
+            <p class="no-border">You can easily get in touch with your lender either through their online web portal or in person and request for your personal loan statement. On most lender websites, you can just log in using your online credentials and provide your loan account number. Once you have tracked your account, you can request for a statement which is either sent to your registered email ID or provided in the form of a PDF file which can be downloaded. Similarly, you can also visit the branch office of the lender from where you have availed the loan and place a request for a statement. In addition to that, you can raise a request for your personal loan statement through phone banking as well.</p>
+            <p class="p-heading no-border">How to Check Personal Loan Outstanding Balance?</p>
+            <p class="no-border">You can check the outstanding personal loan balance through your personal loan statement. Once you have received a copy of your personal loan statement, you can just check the outstanding balance on the statement itself.</p>
+            <p class="p-heading no-border">How to Avoid Rejection of Personal Loan Application?</p>
+            <p class="no-border">The approval of a personal loan application depends on a number of factors. When you apply for a loan, you should make sure that you are sufficiently fulfilling all the factors to ensure the approval of your loan application. The eligibility criteria for personal loans may vary from lender to lender, however, there are number of common criteria which include the age of the applicant, his or her income, credit score, status of employment, and so on. Before you apply for a loan, make sure that all the eligibility criteria are being fulfilled. This will help you avoid rejection of your personal loan application. Although there are other options which you can resort to in case your personal loan application gets rejected, it is recommended to double check before applying to avoid the chances of rejection of application.</p>
+            <p class="p-heading no-border">Top-up Personal Loan</p>
+            <p class="no-border">Offered by a number of financial lenders, as the name suggests, a personal loan customer can avail an additional loan amount through the top-up facility over his/her existing personal loan. The loan amount will be subject to the terms and conditions set by the financial lender, while the interest rate may be the same as the existing loan or could be up to 1% more than the interest rate of the current loan. The tenure of the top-up loan will be subject to that of the existing personal.</p>
+            <p class="p-heading no-border">Key features and benefits of a top-up personal loan</p>
+            <ul>
+               <li>Existing personal loan customers are eligible for the loan top-up provided that they have paid their EMIs regularly and have no pending payments.</li>
+               <li>Quick or instant disbursal of the top-up loan amount.</li>
+               <li>Minimum documentation required.</li>
+               <li>Zero processing fee offered by a number of lenders.</li>
+               <li>Existing personal loan customers are eligible for the loan top-up provided that they have paid their EMIs regularly and have no pending payments.</li>
+            </ul>
+         </div>
+      </section>
+      <section>
+         <div class="loan-offer-container container no-border">
+         <p class="p-heading no-border">Personal Loan Balance Transfer</p>
+         <p class="no-border">The personal loan balance transfer facility gives customers the benefit of transferring their existing loan to another financial lender. This can be done if the other financial lender is offering a better interest rate, if the tenure is a lot more flexible, if they wish for a personal loan top-up on their existing loan, etc.</p>
+         <p class="p-heading no-border">Key features and benefits of a personal loan balance transfer</p>
+         <ul>
+            <li>Get a reduced interest rate on the existing loan amount.</li>
+            <li>Option to top-up the personal loan.</li>
+            <li>Avail flexible repayment options.</li>
+            <li>Avail benefits such as zero processing fee, waiver of last EMI benefit, etc.</li>
+            <li>To get better customer care service.</li>
+         </ul>
+      </section>
+      <section>
+         <div class="loan-offer-container container no-border">
+            <p class="p-heading no-border">Personal Loan Disbursal</p>
+            <p class="no-border">Personal disbursal is basically the process of the financial lender remitting the loan amount in the bank account of the customer. The personal loan disbursal takes place after the submission of relevant documents of the customer and the verification and approval of the financial lender. Financial lenders offer personal loan disbursals in a few seconds, while other take a few hours to a few days to disburse the loan amount following approval.</p>
+         </div>
+      </section>
+      <section>
+         <div class="loan-offer-container container no-border">
+            <p class="p-heading no-border">Personal Loan FAQ</p>
+            <div class="row">
+               <div class="col">
+                  <div class="tabs">
+                     <div class="tab">
+                        <input type="radio" id="rd1" name="rd">
+                        <label class="tab-label" for="rd1">What is a personal loan?</label>
+                        <div class="tab-content">
+                           A personal loan is a type of unsecured loan that that you can borrow from a bank or financial institution if you require funds to pay for your financial needs.
+                        </div>
+                     </div>
+                     <div class="tab">
+                        <input type="radio" id="rd2" name="rd">
+                        <label class="tab-label" for="rd2">How does a personal loan work?</label>
+                        <div class="tab-content">
+                           You borrow a personal loan when you are in need of credit. Once you submit your loan application to a lender for a personal loan, the lender verifies and approves it. Post this, the loan amount is disbursed into your bank account. Once you receive the loan amount, you will need to repay the lender via EMIs over the course of the loan repayment tenure.
+                        </div>
+                     </div>
+                     <div class="tab">
+                        <input type="radio" id="rd3" name="rd">
+                        <label class="tab-label" for="rd3">What is an EMI?</label>
+                        <div class="tab-content">
+                           EMI or Equal Monthly Installment is the amount that a borrower pays each month towards an outstanding loan to clear off the debt within a specific time frame. EMI includes principal and interest.
+                        </div>
+                     </div>
+                     <div class="tab">
+                        <input type="radio" id="rd4" name="rd">
+                        <label class="tab-label" for="rd4">What is a credit score? Why is it important?</label>
+                        <div class="tab-content">
+                           A credit score or rating is a number that indicates how you repay debt. It is important because your score determines whether you qualify for loans, credit cards, and other credit facilities.
+                        </div>
+                     </div>
+                     <div class="tab">
+                        <input type="radio" id="rd5" name="rd">
+                        <label class="tab-label" for="rd5">How does my credit score impact the calculation of my loan amount?</label>
+                        <div class="tab-content">
+                           Your credit score is an indicator of how you handle your finances. It considers your credit card bill payment history, repayment of past and current loans, and other criteria. Your credit rating tells lenders how likely you are to repay them if they grant you a loan. The better your credit score, the better the chances are of getting a higher loan amount.
+                        </div>
+                     </div>
+                     <div class="tab">
+                        <input type="radio" id="rd6" name="rd">
+                        <label class="tab-label" for="rd6">What is the maximum amount of loan I can get?</label>
+                        <div class="tab-content">
+                           The maximum amount of loan depends on your monthly income. In India, there are lenders who offer up to Rs.40 lakh as a personal loan.
+                        </div>
+                     </div>
+                     <div class="tab">
+                        <input type="radio" id="rd7" name="rd">
+                        <label class="tab-label" for="rd7">What is a prepayment and how does it help in repaying my loan?</label>
+                        <div class="tab-content">
+                           If you happen to get some extra money, you can pay it towards your loan even before the EMIs are due. This is called a prepayment. Every prepayment you make goes towards reducing the outstanding principal component of your loan. And since the principal reduces, your interest cost will also reduce. Also, your tenure gets shortened this way, helping you pay off the loan ahead of time.
+                        </div>
+                     </div>
+                     <div class="tab">
+                        <input type="radio" id="rd8" name="rd">
+                        <label class="tab-label" for="rd8">How much loan can I get if I earn a monthly salary of Rs.60,000?</label>
+                        <div class="tab-content">
+                           For personal loans, most lenders fix the minimum monthly income requirement between Rs.15,000 and Rs.25,000. Thus, if you have a monthly income of Rs.60,000, you can be fairly certain that you won’t find it difficult to borrow a personal loan. The exact amount that you will be offered will, however, vary based on your repayment capacity, debt-to-income ratio, the lender’s terms and conditions, etc.
+                        </div>
+                     </div>
+                     <div class="tab">
+                        <input type="radio" id="rd9" name="rd">
+                        <label class="tab-label" for="rd9">Is the PAN card mandatory when applying for personal loans?</label>
+                        <div class="tab-content">
+                           Yes, you are required to have a PAN card to apply for a personal loan.
+                        </div>
+                     </div>
+                     <div class="tab">
+                        <input type="radio" id="rd10" name="rd">
+                        <label class="tab-label" for="rd10">How much loan can I get if my salary is Rs.25,000?</label>
+                        <div class="tab-content">
+                           With a monthly salary of Rs.25,000, you are likely to be eligible to borrow a personal loan. However, the lender will also check if you have any other outstanding loans, your credit score, repayment capacity, etc. before deciding how much you can borrow. You can use a personal loan eligibility calculator tool to know how much you are eligible to borrow with a monthly salary of Rs.25,000.
+                        </div>
+                     </div>
+                     <div class="tab">
+                        <input type="radio" id="rd11" name="rd">
+                        <label class="tab-label" for="rd11">Is there an upper age limit for personal loans?</label>
+                        <div class="tab-content">
+                           Yes, the upper age limit to apply for a personal loan is 60 years. This may, however, vary from lender to lender.
+                        </div>
+                     </div>
+                     <div class="tab">
+                        <input type="radio" id="rd12" name="rd">
+                        <label class="tab-label" for="rd12">Is Form 16 required to borrow a personal loan?</label>
+                        <div class="tab-content">
+                           Yes, lenders will require you to submit your Form 16 when applying for a personal loan.
+                        </div>
+                     </div>
+                     <div class="tab">
+                        <input type="radio" id="rd13" name="rd">
+                        <label class="tab-label" for="rd13">Is it mandatory to submit my Aadhaar card to borrow a personal loan?</label>
+                        <div class="tab-content">
+                           Yes, most lenders will require you to submit your Aadhaar card when applying for a personal loan.
+                        </div>
+                     </div>
+                     <div class="tab">
+                        <input type="radio" id="rd14" name="rd">
+                        <label class="tab-label" for="rd14">What is the minimum salary that an individual is required to earn to apply for a personal loan?</label>
+                        <div class="tab-content">
+                           The minimum salary requirement will vary from lender to lender. Most lenders, however, will require you to earn at least Rs.15,000. If you reside in a metropolitan city, you may have to earn between Rs.20,000 and Rs.25,000.
+                        </div>
+                     </div>
+                     <div class="tab">
+                        <input type="radio" id="rd15" name="rd">
+                        <label class="tab-label" for="rd15">Can you get a personal loan if you are retired?</label>
+                        <div class="tab-content">
+                           A number of banks offer personal loans for pensioners. Thus, if you are a pensioner, you will be able to borrow a personal loan.
+                        </div>
+                     </div>
+                     <div class="tab">
+                        <input type="radio" id="rd16" name="rd">
+                        <label class="tab-label" for="rd16">Can I get a personal loan with a credit score below 500?</label>
+                        <div class="tab-content">
+                           If your credit score is under 500, there is a good chance that your personal loan application may be rejected by the lender. Even if your application is approved, you may have to pay a high rate of interest for the loan.
+                        </div>
+                     </div>
+                     <div class="tab">
+                        <input type="radio" id="rd17" name="rd">
+                        <label class="tab-label" for="rd17">Can I borrow a personal loan to pay for my house deposit?</label>
+                        <div class="tab-content">
+                           Yes, you can. Banks and financial institutions that offer personal loans do not lay down any restrictions on how the loan amount can be used.
+                        </div>
+                     </div>
+                     <div class="tab">
+                        <input type="radio" id="rd18" name="rd">
+                        <label class="tab-label" for="rd18">How long does it take to get approved for a personal loan?</label>
+                        <div class="tab-content">
+                           It may take anywhere between a few seconds to up to 48 hours. If you are a pre-approved customer, your loan amount will be approved very quickly. Else, you may have to wait for up to 48 hours to get approval.
+                        </div>
+                     </div>
+                     <div class="tab">
+                        <input type="radio" id="rd19" name="rd">
+                        <label class="tab-label" for="rd19">Will borrowing a personal loan affect my credit score?</label>
+                        <div class="tab-content">
+                           Once you borrow a personal loan, your credit score will improve if you pay the required EMIs as per the schedule specified by your lender. On the other hand, your credit score will drop if you miss EMI payments.
+                        </div>
+                     </div>
+                     <div class="tab">
+                        <input type="radio" id="rd20" name="rd">
+                        <label class="tab-label" for="rd20">Is borrowing a personal loan better than using a credit card?</label>
+                        <div class="tab-content">
+                           Personal loans are a good option if you need funds for a large expense or wish to consolidate multiple debts. The key benefit of a personal loan is that you can pay monthly instalments to repay your borrowed loan amount. Further, you can also choose a repayment tenure between 1 year and 5 years to suit your repayment ability. Credit cards, on the other hand, are a good choice if you want to finance smaller expenses, provided that you can repay your balance in full at the end of every month.
+                        </div>
+                     </div>
+                     <div class="tab">
+                        <input type="radio" id="rd21" name="rd">
+                        <label class="tab-label" for="rd21">Is it smart to consolidate my debts with a personal loan?</label>
+                        <div class="tab-content">
+                           Yes, if you have multiple outstanding debts, it is best to avail a personal loan and consolidate your debts. Doing this will make repayments a whole lot easier and help you clear off your consolidated loan amount in affordable instalments.
+                        </div>
+                     </div>
+                     <div class="tab">
+                        <input type="radio" id="rd22" name="rd">
+                        <label class="tab-label" for="rd22">What is the best reason to give when applying for a personal loan?</label>
+                        <div class="tab-content">
+                           Most lenders will not require you to provide a reason when applying for a personal loan.
+                        </div>
+                     </div>
+                     <div class="tab">
+                        <input type="radio" id="rd23" name="rd">
+                        <label class="tab-label" for="rd23">Can I boy house deposit?</label>
+                        <div class="tab-content">
+                           Most lenders will require you to have a work experience of at least 2 years. This condition, however, varies from lender to lender.
+                        </div>
+                     </div>
+                     <div class="tab">
+                        <input type="radio" id="rd24" name="rd">
+                        <label class="tab-label" for="rd24">Can I use a personal loan to purchase a car?</label>
+                        <div class="tab-content">
+                           Yes, you can use a personal loan to purchase a car. That said, if the sole purpose of the loan is to purchase a car, it is highly recommended that you avail a car loan since it is likely that you will be offered a lower rate of interest.
+                        </div>
+                     </div>
+                     <div class="tab">
+                        <input type="radio" id="rd25" name="rd">
+                        <label class="tab-label" for="rd25">How will I know if my personal loan had been approved?</label>
+                        <div class="tab-content">
+                           You can track the status of your personal loan application through online/offline channels. Also, the lender will let you know if your application has been approved.
+                        </div>
+                     </div>
+                     <div class="tab">
+                        <input type="radio" id="rd26" name="rd">
+                        <label class="tab-label" for="rd26">How can I access the funds that I receive through my personal loan?</label>
+                        <div class="tab-content">
+                           Most lenders disburse the loan amount into your savings bank account.
+                        </div>
+                     </div>
+                     <div class="tab">
+                        <input type="radio" id="rd27" name="rd">
+                        <label class="tab-label" for="rd27">How do I get a top-up on my personal loan if I require more funds?</label>
+                        <div class="tab-content">
+                           Keep in mind that not all lenders offer top-up personal loans. However, if the lender does offer top-up personal loans, you can apply for the same through online or offline channels.
+                        </div>
+                     </div>
+                     <div class="tab">
+                        <input type="radio" id="rd28" name="rd">
+                        <label class="tab-label" for="rd28">Will I get a loan account statement detailing my payments and outstanding balance?</label>
+                        <div class="tab-content">
+                           You can log into your lender’s customer portal to view your loan account statement.
+                        </div>
+                     </div>
+                     <div class="tab">
+                        <input type="radio" id="rd29" name="rd">
+                        <label class="tab-label" for="rd29">What should I do if I want to repay my loan (partially or in full) during the loan repayment term?</label>
+                        <div class="tab-content">
+                           Most lenders will allow you to make pre-payments or pre-close your loan during the loan repayment term. You will, however, have to pay a nominal charge to the lender for doing the same. Keep in mind that most lenders will only allow you to prepay or pre-close your loan after 1 year of borrowing the loan. If you want to prepay/pre-close your loan, ensure that you inform your lender of the same.
+                        </div>
+                     </div>
+                     <div class="tab">
+                        <input type="radio" id="rd30" name="rd">
+                        <label class="tab-label" for="rd30">Do personal loans offer tax exemptions?</label>
+                        <div class="tab-content">
+                           Personal loans only offer tax exemptions if you are using the loan amount for renovation of your house, to pay for educational expenses, or to expand your business.
+                        </div>
+                     </div>
+                     <div class="tab">
+                        <input type="radio" id="rd31" name="rd">
+                        <label class="tab-label" for="rd31">What is the impact of GST on personal loans?</label>
+                        <div class="tab-content">
+                           Prior to the implementation of the Goods and Services Tax (GST), a service charge of 15% was applicable to personal loans. Post the introduction of the GST on 1 July 2017, a service tax of 18% is applicable on personal loans. Thus, there is a 3% increase in the payable service tax. The service tax, however, is only levied on the processing fee, prepayment charges, etc., and not on EMI payments.
+                        </div>
+                     </div>
+                     <div class="tab">
+                        <input type="radio" id="rd32" name="rd">
+                        <label class="tab-label" for="rd32">Can I get a personal loan without submitting my salary slips?</label>
+                        <div class="tab-content">
+                           If you are a salaried employee looking to borrow a personal loan, you should submit your salary slips as proof of employment and income. Lenders will not process your application unless you submit the required documents.
+                        </div>
+                     </div>
+                     <div class="tab">
+                        <input type="radio" id="rd33" name="rd">
+                        <label class="tab-label" for="rd33">How do I cancel my personal loan after the loan is disbursed?</label>
+                        <div class="tab-content">
+                           Yes, you can. Baunt can be used.
+                        </div>
+                     </div>
+                     <div class="tab">
+                        <input type="radio" id="rd34" name="rd">
+                        <label class="tab-label" for="rd34">Can I boy house deposit?</label>
+                        <div class="tab-content">
+                           You can cancel your personal loan application before the loan amount is disbursed into your account by submitting a written application for the same. You will also need to pay the loan cancellation fee to the lender. Once the loan amount has been disbursed into your account, most lenders will not allow you to cancel it. You can, however, pre-close the loan. If you are thinking of cancelling your loan because you pay a high interest rate on your loan, you can consider transferring your outstanding loan balance to another bank or financial institution.
+                        </div>
+                     </div>
+                     <div class="tab">
+                        <input type="radio" id="rd35" name="rd">
+                        <label class="tab-label" for="rd35">Since a longer tenure means lower EMIs, should I always choose a longer tenure?</label>
+                        <div class="tab-content">
+                           No, not necessarily. This depends on your ability to repay the loan. In other words, how much you can afford to repay every month. If you’re able to afford only a smaller amount each month, choose a longer tenure. But remember that this will result in you paying more interest over the longer duration. Also, it will keep you indebted to the lender for a longer time.
+                        </div>
+                     </div>
+                     <div class="tab">
+                        <input type="radio" id="rd36" name="rd">
+                        <label class="tab-label" for="rd36">How can I repay my personal loan?</label>
+                        <div class="tab-content">
+                           There are a number of ways by which you can repay your loan. These include:
+                           <ul>
+                              <li>Via Electronic Fund Transfer (EFT)</li>
+                              <li>By cheque</li>
+                              <li>By physically paying at a branch of the lender</li>
+                              <li>Via standing instruction for automatic deduction from your account</li>
+                           </ul>
+                        </div>
+                     </div>
+                     <div class="tab">
+                        <input type="radio" id="rd37" name="rd">
+                        <label class="tab-label" for="rd37">How often should I repay my loan?</label>
+                        <div class="tab-content">
+                           This depends on the lender you choose. Normally, every personal loan repayment is calculated on the basis of a monthly repayment pattern. It includes the principal and interest components that you’re expected to repay each month.
+                        </div>
+                     </div>
+                     <div class="tab">
+                        <input type="radio" id="rd38" name="rd">
+                        <label class="tab-label" for="rd38">How can I avoid defaulting on my personal loan repayments?</label>
+                        <div class="tab-content">
+                           <p> The measures given below can help you pay your loan instalments on time:</p>
+                           <ul>
+                              <li>Apply only for a loan amount that you can afford to repay on time</li>
+                              <li>Don’t apply for a larger loan simply because you’re eligible for it</li>
+                              <li>Choose the tenure wisely. It will determine how much you have to repay every month</li>
+                              <li>Choose a loan with a low interest rate</li>
+                              <li> Look out for other rates, charges, and hidden fees</li>
+                              <li>Plan your finances well</li>
+                              <li> Give the utmost priority for your EMI in your monthly budget</li>
+                              <li>Make a repayment schedule of your own</li>
+                              <li>Set reminders for each month’s repayment</li>
+                           </ul>
+                        </div>
+                     </div>
+                     <div class="tab">
+                        <input type="radio" id="rd39" name="rd">
+                        <label class="tab-label" for="rd39">What will happen if I default on my loan repayment when I have offered collateral?</label>
+                        <div class="tab-content">
+                           Personal loans are usually unsecured loans. Sometimes, if you don’t fulfil the loan criteria, you may be able to get a loan by offering collateral. In such cases, you have to be extra careful about repaying the loan on time. If you default on your repayment, the lender may take possession of your collateral to cover their losses. Defaulting in such circumstances could make you lose your collateral.
+                        </div>
+                     </div>
+                     <div class="tab">
+                        <input type="radio" id="rd40" name="rd">
+                        <label class="tab-label" for="rd40">If I have a guarantor, what will happen if I default on my EMIs?</label>
+                        <div class="tab-content">
+                           A guarantor is someone who guarantees repayment on your behalf. So, if you’re unable to repay the loan as and when the installments are due, your guarantor will be asked to pay.
+                        </div>
+                     </div>
+                     <div class="tab">
+                        <input type="radio" id="rd41" name="rd">
+                        <label class="tab-label" for="rd41">If I have a co-applicant, what will happen if I don’t repay my loan on time?</label>
+                        <div class="tab-content">
+                           Yes, you can. Baunt can be used.
+                        </div>
+                     </div>
+                     <div class="tab">
+                        <input type="radio" id="rd42" name="rd">
+                        <label class="tab-label" for="rd42">Can I boy house deposit?</label>
+                        <div class="tab-content">
+                           All co-applicants for a loan are equally responsible for repaying the loan. If one applicant is unable to repay the loan, the remaining applicants are expected to do so. So, if you’re not able to pay the EMIs on time, your co-applicant is expected to pay. If your co-applicant also fails to pay the installments on time, it will result in a repayment default.
+                        </div>
+                     </div>
+                     <div class="tab">
+                        <input type="radio" id="rd43" name="rd">
+                        <label class="tab-label" for="rd43">Are there any charges for prepaying my personal loan?</label>
+                        <div class="tab-content">
+                           Some lenders may ask you to pay a fee if you want to prepay a part of your loan. Others may either waive the fee or may not have prepayment charges at all.
+                        </div>
+                     </div>
+                     <div class="tab">
+                        <input type="radio" id="rd44" name="rd">
+                        <label class="tab-label" for="rd44">How is my prepayment fee calculated?</label>
+                        <div class="tab-content">
+                           This depends on your lender. Some lenders charge you a fixed fee for each prepayment. Others may charge you a percentage of the amount outstanding or a percentage of the amount prepaid.
+                        </div>
+                     </div>
+                     <div class="tab">
+                        <input type="radio" id="rd45" name="rd">
+                        <label class="tab-label" for="rd45">Can I offer collateral and get a loan if I have bad credit?</label>
+                        <div class="tab-content">
+                           Yes, you can. This is another way to get a personal loan even if your credit rating is bad. Some lenders may offer you a loan if you’re willing to offer them something as collateral. But keep in mind that the lender has every right to possess your collateral if you don’t repay the loan as promised.
+                        </div>
+                     </div>
+                     <div class="tab">
+                        <input type="radio" id="rd46" name="rd">
+                        <label class="tab-label" for="rd46">Will I be able to get a loan along with a co-applicant if I have bad credit?</label>
+                        <div class="tab-content">
+                           Yes, applying for a loan along with a co-applicant who has good credit can help you get a loan even if you have bad credit. The scores of both applicants are considered when processing a joint-loan application. This way, the good credit of your co-applicant will help balance out your poor credit. But, remember that your co-applicant will be held responsible for repaying the loan if you are unable to do so.
+                        </div>
+                     </div>
+                     <div class="tab">
+                        <input type="radio" id="rd47" name="rd">
+                        <label class="tab-label" for="rd47">What credit rating should I have to get a loan?</label>
+                        <div class="tab-content">
+                           A score of 700 and above is considered to be good. This should be enough to get you a loan without any hassles. But, a score of 800 or more will get you into the good books of lenders. This could get you better interest rates and repayment options.
+                        </div>
+                     </div>
+                     <div class="tab">
+                        <input type="radio" id="rd48" name="rd">
+                        <label class="tab-label" for="rd48">Why should I take a personal loan?</label>
+                        <div class="tab-content">
+                           An unsecured loan can help you during tough financial situations. You can easily apply for one if you qualify for it. Lenders usually process your loan quickly. You won’t have to offer any collateral either.
+                        </div>
+                     </div>
+                     <div class="tab">
+                        <input type="radio" id="rd49" name="rd">
+                        <label class="tab-label" for="rd49">What does the process of applying for a loan include?</label>
+                        <div class="tab-content">
+                           <p>The process of applying for a loan includes the following steps:</p>
+                           <ul>
+                              <li>Searching for the right loan</li>
+                              <li>Getting the required documents ready></li>
+                              <li>Applying for the loan</li>
+                              <li>Submitting the documents</li>
+                              <li>Application verification and approval</li>
+                              <li>Loan sanctioning and disbursement</li>
+                           </ul>
+                        </div>
+                     </div>
+                     <div class="tab">
+                        <input type="radio" id="rd50" name="rd">
+                        <label class="tab-label" for="rd50">What do I need to apply for a personal loan?</label>
+                        <div class="tab-content">
+                           To apply for a loan, you need to make sure that you are first eligible for it. Don’t apply for a loan for which you aren’t eligible. This can hurt your credit score. Apart from checking your eligibility, you also need to make sure that you have all the necessary documents in hand before applying.
+                        </div>
+                     </div>
+                     <div class="tab">
+                        <input type="radio" id="rd51" name="rd">
+                        <label class="tab-label" for="rd51">What will happen if I don’t have one or two of the required documents?</label>
+                        <div class="tab-content">
+                           Lenders usually require you to have all the required documents in order before you apply. However, if you don’t have one or more of these, you can talk to the lender and find out if there is an alternative solution. If these are vital documents, your loan will not be sanctioned till you give them.
+                        </div>
+                     </div>
+                     <div class="tab">
+                        <input type="radio" id="rd52" name="rd">
+                        <label class="tab-label" for="rd52">When will a bank reject my loan application?</label>
+                        <div class="tab-content">
+                           A bank can reject your loan application if you apply for a loan for which you are not eligible. It can also reject your application if you fail to submit the documents it requires.
+                        </div>
+                     </div>
+                     <div class="tab">
+                        <input type="radio" id="rd53" name="rd">
+                        <label class="tab-label" for="rd53">Is part- prepayment allowed on my personal loan?</label>
+                        <div class="tab-content">
+                           Personal loans can be prepaid in parts or as a whole at any stage. Some banks may charge a prepayment penalty for the same. Some banks do not allow part-prepayment. So, check all the documents before finalising on the loan with the bank.
+                        </div>
+                     </div>
+                     <div class="tab">
+                        <input type="radio" id="rd54" name="rd">
+                        <label class="tab-label" for="rd54">Will I need a guarantor to take a personal loan?</label>
+                        <div class="tab-content">
+                           No, you will not need a guarantor to take a personal loan.
+                        </div>
+                     </div>
+                     <div class="tab">
+                        <input type="radio" id="rd55" name="rd">
+                        <label class="tab-label" for="rd55">Can I club my income with my spouse to take a personal loan?</label>
+                        <div class="tab-content">
+                           Yes, you can club the income of your spouse to boost your eligibility to avail a personal loan.
+                        </div>
+                     </div>
+                     <div class="tab">
+                        <input type="radio" id="rd56" name="rd">
+                        <label class="tab-label" for="rd56">How will I be eligible for a relationship discount?</label>
+                        <div class="tab-content">
+                           If you have been a customer for a particular bank for a while, then the bank might reduce the personal loan interest rate or other such charges. Some banks will also provide you additional services.
+                        </div>
+                     </div>
+                     <div class="tab">
+                        <input type="radio" id="rd57" name="rd">
+                        <label class="tab-label" for="rd57">Do I need to open a bank account to service my personal loan?</label>
+                        <div class="tab-content">
+                           If you do not have an account with the bank, it is not mandatory to apply for one. But, if you apply for a loan with your existing banker, then you will be eligible for a relationship discount.
+                        </div>
+                     </div>
+                     <div class="tab">
+                        <input type="radio" id="rd58" name="rd">
+                        <label class="tab-label" for="rd58">How do I stop executives from calling me to let me know about other loans?</label>
+                        <div class="tab-content">
+                           Some banks let you register yourself for ‘Do Not Disturb'. If you opt for this, the executives will not disturb you with cold sales calls.
+                        </div>
+                     </div>
+                     <div class="tab">
+                        <input type="radio" id="rd59" name="rd">
+                        <label class="tab-label" for="rd59">What is the best way to apply for personal Loan?</label>
+                        <div class="tab-content">
+                           The best way to apply for an personal loan is by using the online loan application tool at BankBazaar.com The tool can be accessed on this page allowing users to choose personal loan from various banks and NBFCS as per their selection.
+                        </div>
+                     </div>
+                     <div class="tab">
+                        <input type="radio" id="rd60" name="rd">
+                        <label class="tab-label" for="rd60">How to Track Personal Loan Application status?</label>
+                        <div class="tab-content">
+                           BankBazaar.com offers it's loan applicants an active tracking tool through both email and SMS allowing them to track daily updates of their loan application.
+                        </div>
+                     </div>
+                     <div class="tab">
+                        <input type="radio" id="rd61" name="rd">
+                        <label class="tab-label" for="rd61">Is my Data Safe with BankBazaar.com?</label>
+                        <div class="tab-content">
+                           BankBazaar.com is India's premier financial marketplace and takes utmost care in ensuring that all data is sent in electronic form with high level of encryption. BankBazaar.com does not share data with any third party other than the financial institution.
+                        </div>
+                     </div>
+                     <div class="tab">
+                        <input type="radio" id="rd62" name="rd">
+                        <label class="tab-label" for="rd62">Is BankBazaar.com Personal Loan Tool Free?</label>
+                        <div class="tab-content">
+                           Yes BankBazaar.com personal loan calculator tool is totally free and the portal does not charge any fee for its services from users.
+                        </div>
+                     </div>
+                     <div class="tab">
+                        <input type="radio" id="rd63" name="rd">
+                        <label class="tab-label" for="rd63">How do I obtain a Duplicate Repayment Schedule for my loan account?</label>
+                        <div class="tab-content">
+                           You can request the bank for a personal loan duplicate repayment schedule either via your net banking account, or by calling the customer care unit or by writing to them via your registered email ID.
+                        </div>
+                     </div>
+                     <div class="tab">
+                        <input type="radio" id="rd64" name="rd">
+                        <label class="tab-label" for="rd64">How can I get my address changed in my loan account?</label>
+                        <div class="tab-content">
+                           You can change your address of residence linked to your loan account via your net banking account or by visiting the bank branch. At the bank branch, you will have to fill in the address-change form and submit relevant address proof documents that are authorised or attested by the State or Central Government.
+                        </div>
+                     </div>
+                     <div class="tab">
+                        <input type="radio" id="rd65" name="rd">
+                        <label class="tab-label" for="rd65">How can I make sure I get approved for a personal loan?</label>
+                        <div class="tab-content">
+                           Ensure that you meet the eligibility criteria set by the bank, such as your age, credit score, minimum monthly income, work experience and that there are no discrepancies in the documents that you submit to the financial lender.
+                        </div>
+                     </div>
+                     <div class="tab">
+                        <input type="radio" id="rd66" name="rd">
+                        <label class="tab-label" for="rd66">Do personal loans affect mortgage?</label>
+                        <div class="tab-content">
+                           Not necessarily, but it depends on your current credit score or past repayment record as well as your net monthly income and lender’s discernment if you can repay the loan without any payment lapses.
+                        </div>
+                     </div>
+                     <div class="tab">
+                        <input type="radio" id="rd67" name="rd">
+                        <label class="tab-label" for="rd67">Can you get a mortgage loan if you have a personal loan?</label>
+                        <div class="tab-content">
+                           Yes you can, but it depends on your income and your ability to pay the EMIs of both the home loan and the personal loan.
+                        </div>
+                     </div>
+                     <div class="tab">
+                        <input type="radio" id="rd68" name="rd">
+                        <label class="tab-label" for="rd68">How many personal loans are too many?</label>
+                        <div class="tab-content">
+                           Most lenders do not allow a customer to avail a second personal loan if he/she is still repaying the first personal loan. However, while it is still possible to have multiple personal loans at once, banks take into consideration the debt-to-income ratio of the individual, which will increase the chance of the personal loan being rejected if he/she has existing loans.
+                        </div>
+                     </div>
+                     <div class="tab">
+                        <input type="radio" id="rd69" name="rd">
+                        <label class="tab-label" for="rd69">What is RTGS?</label>
+                        <div class="tab-content">
+                           Real Time Gross Settlement (RTGS) is a real-time money transfer interbank transfer system. Individuals or institutions can send larger amounts of money via RTGS and once the amount is credit in the account of the beneficiary, it is irreversible.
+                        </div>
+                     </div>
+                     <div class="tab">
+                        <input type="radio" id="rd70" name="rd">
+                        <label class="tab-label" for="rd70">What is NEFT?</label>
+                        <div class="tab-content">
+                           National Electronic Funds Transfer (NEFT) is a fund transfer facility between one NEFT-enabled bank account to another. NEFT transfers are not real time like RTGS are the transfers are carried out in batches during the working hours of the bank.
+                        </div>
+                     </div>
+                     <div class="tab">
+                        <input type="radio" id="rd71" name="rd">
+                        <label class="tab-label" for="rd71">What is SI (Standing Instructions)?</label>
+                        <div class="tab-content">
+                           Standing instructions is basically instructions given by a bank customer to the bank to make a payment to another bank account or to the bank at regular intervals or as a one-time payment - as per the requirement. As per the instructions, the money in the bank account of the customer will be debited and remitted in another account as per the specified time of the customer.
+                        </div>
+                     </div>
+                     <div class="tab">
+                        <input type="radio" id="rd72" name="rd">
+                        <label class="tab-label" for="rd72">How to check personal loan balance?</label>
+                        <div class="tab-content">
+                           Bank customers can check their personal loan balance through the repayment schedule that will be issued by the lender.
+                        </div>
+                     </div>
+                     <div class="tab">
+                        <input type="radio" id="rd73" name="rd">
+                        <label class="tab-label" for="rd73">What happens if a personal loan is not paid?</label>
+                        <div class="tab-content">
+                           If the borrower fails to pay the EMI, the bank charges a penal interest on the overdue amount. Financial lenders usually charge a penal interest of 2%-3% per month of the overdue amount.
+                        </div>
+                     </div>
+                     <div class="tab">
+                        <input type="radio" id="rd74" name="rd">
+                        <label class="tab-label" for="rd74">Where can I get a personal loan with bad credit and no checking account?</label>
+                        <div class="tab-content">
+                           It could be hard to get a traditional personal loan from a bank with a poor credit score and no checking account. However, certain lenders offer types of personal loans such as payday loans for those with a poor credit score. That said, the interest charged will be quite high.
+                        </div>
+                     </div>
+                     <div class="tab">
+                        <input type="radio" id="rd75" name="rd">
+                        <label class="tab-label" for="rd75">Can I pay more than my EMI in personal loan?</label>
+                        <div class="tab-content">
+                           Over your EMI, after a certain period following the disbursement of the loan, you can make a part-payment towards the loan. The part payment will further deduct the outstanding principal amount of the loan.
+                        </div>
+                     </div>
+                     <div class="tab">
+                        <input type="radio" id="rd76" name="rd">
+                        <label class="tab-label" for="rd76">Is it good to top up personal loan?</label>
+                        <div class="tab-content">
+                           Opting for a top-up personal loan is better than availing a fresh personal loan, as the documentation process might not be required, the interest rates will be attractive, and the loan amount will be disbursed quickly.
+                        </div>
+                     </div>
+                     <div class="tab">
+                        <input type="radio" id="rd77" name="rd">
+                        <label class="tab-label" for="rd77">Can a fresher get a personal loan?</label>
+                        <div class="tab-content">
+                           Yes, individuals who have just started working can apply for a personal loan offered by certain lenders. Certain lenders list a minimum of 3 months’ experience and a minimum monthly income of Rs.15,000 to apply for a personal loan.
+                        </div>
+                     </div>
+                     <div class="tab">
+                        <input type="radio" id="rd78" name="rd">
+                        <label class="tab-label" for="rd78">What is pre-approved personal loan?</label>
+                        <div class="tab-content">
+                           A pre-approved loan is one where the customer can apply for a loan and possibly doesn’t need to submit documents or go through the verification process as he/she shares a healthy relationship with the bank as an existing customer and has a clean repayment record.
+                        </div>
+                     </div>
+                     <div class="tab">
+                        <input type="radio" id="rd79" name="rd">
+                        <label class="tab-label" for="rd79">Do personal loan pre-closures have certain terms and conditions?</label>
+                        <div class="tab-content">
+                           Yes, financial lenders have their terms and conditions when it comes to personal loan foreclosures. Usually, financial lenders allow loan pre-closures only after the payment of 12 EMIs and charge a foreclosure charge + GST on the outstanding loan amount.
+                        </div>
+                     </div>
+                     <div class="tab">
+                        <input type="radio" id="rd80" name="rd">
+                        <label class="tab-label" for="rd80">Is it possible to get a personal loan for a self-employed individual with no income proof?</label>
+                        <div class="tab-content">
+                           Most banks and financial lenders require income proof as verification prior to the approval of the loan application. However, for some lenders, the proof of work experience and bank statements of the individual will suffice.
+                        </div>
+                     </div>
+                     <div class="tab">
+                        <input type="radio" id="rd81" name="rd">
+                        <label class="tab-label" for="rd81">What is reducing rate of interest in personal loan?</label>
+                        <div class="tab-content">
+                           If the borrower has opted for the reducing balance interest rate, then the interest will be as per the outstanding amount. As the loan amount decreases with every EMI, the interest rate will be applied only on the outstanding balance. With the flat interest rate option, the interest will remain the same irrespective of the reducing principal amount.
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="comparediv" style="display: none">
+            <div class="comparedivcontent">
+                  sddadadadaddad Number:
+                  
+              </div>
+      </div>
+      </section>
+
+      <footer>
+         <div class="copyright">
+            Please Note***** GoGetScore will never ask you to make a payment anywhere outside the secure GoGetScore website. DO NOT make payment to any other bank account or wallet or divulge your bank/card details to fraudsters and imposters claiming to be operating on our behalf.
+         </div>
+         <div class="text-center">
+            <ul class="ml-lg-auto">
+               <li class="mr-3">
+                  <a href="../index.html">Home</a>
+               </li>
+               <li class="mr-3">
+                  <a href="../about-us.html">About Us</a>
+               </li>
+               <li class="mr-3">
+                  <a href="../term-and-condition.html">Terms & Conditions</a>
+               </li>
+               <li class="mr-3">
+                  <a href="../privacy-policy.html">Privacy Policy</a>
+               </li>
+               <li>
+                  <a href="../contact-us.html">Contact Us</a>
+               </li>
+            </ul>
+         </div>
+      </footer>
+      <!-- pop up after submit -->
+      <!-- pop up after submit -->
+      <!--login form pop up-->
+      <div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+         aria-hidden="true">
+         <div class="modal-dialog" role="document">
+            <div class="modal-content">
+               <div class="modal-header text-center">
+                  <h4 class="modal-title w-100 font-weight-bold">Login</h4>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                  </button>
+               </div>
+               <div class="modal-body mx-3">
+                  <div class="form-group">
+                     <label class="form-label" for="verifyphone">Enter your Phone number</label>
+                     <input type="text" id="verifyphone" class="form-input" name="verifyphone" />
+                  </div>
+               </div>
+               <div class="modal-footer d-flex justify-content-center">
+                  <div class="btn btn-primary submit-btn" data-dismiss="modal" data-toggle="modal" data-target="#modalLoginFormverify">Verify</div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!--login form pop up-->
+      <!--login form verify  pop up-->
+      <div class="modal fade" id="modalLoginFormverify" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+         aria-hidden="true">
+         <div class="modal-dialog" role="document">
+            <div class="modal-content">
+               <div class="modal-header text-center">
+                  <h4 class="modal-title w-100 font-weight-bold">Enter OTP</h4>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                  </button>
+               </div>
+               <div class="modal-body mx-3 text-center">
+                  <form method="get" class="digit-group" data-group-name="digits" data-autosubmit="false" autocomplete="off">
+                     <input type="text" id="digit-1" name="digit-1" data-next="digit-2" />
+                     <input type="text" id="digit-2" name="digit-2" data-next="digit-3" data-previous="digit-1" />
+                     <span class="splitter">&ndash;</span>
+                     <input type="text" id="digit-3" name="digit-3" data-next="digit-4" data-previous="digit-2" />
+                     <input type="text" id="digit-4" name="digit-4" data-next="digit-5" data-previous="digit-3" />
+                  </form>
+               </div>
+               <div class="modal-footer d-flex justify-content-center">
+                  <div class="btn btn-primary submit-btn" data-toggle="modal" data-target="#modalLoginFormverify">Verify</div>
+               </div>
+            </div>
+         </div>
+      </div>
+     
+      <!--login form verify pop up-->
+      <script src="../js/bootstrap.min.js"></script>
+      <link rel="stylesheet" type="text/css" href="../css/jquery-ui.css" />
+      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>	
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" type="text/javascript"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" type="text/javascript"></script>
+      <script src="../js/validation.js"></script>
+      <!--<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
+      <script src="../js/jquery.slideform.js"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.0.0/css/bootstrap-slider.min.css"> 
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.0.0/bootstrap-slider.min.js"></script>
+
+     <script src="../js/price_range_script.js"></script>
+
+     <script>
+     
+     </script>
+     <style>
+     
+     </style>
+      <script>
+
+            $(function(){
+        $('.showSingle').click(function(){
+           $('.targetDiv').hide();
+           $('#div'+$(this).attr('target')).show();
+        });
+        
+        $('.close, .done, header, .filter-bottom').click(function(){
+           $('.targetDiv').hide();
+        });
+});
+
+$(".showSingle").click(function() {
+    $('.targetDiv').addClass('activeblock');
+});  
+
+
+
+
+         </script>
+     <script>
+      $( function() {
+        $( ".slider-range-min" ).slider({
+          range: "min",
+          value: 3,
+          min: 1,
+          max: 5,
+          slide: function( event, ui ) {
+            $( ".amount" ).val(ui.value + " " + "Year");
+          }
+        });
+        $( ".amount" ).val( $( ".slider-range-min" ).slider( "value" ) + " " + "Year" );
+      } );
+
+      $( function() {
+        $( ".slider-range-min1" ).slider({
+          range: "min",
+          value: 37,
+          min: 50000,
+          max: 500000,
+          slide: function( event, ui ) {
+            $( ".amount1" ).val( "₹" + ui.value );
+          }
+        });
+        $( ".amount1" ).val( "₹" + $( ".slider-range-min1" ).slider( "value" ) );
+      } );
+      </script>
+    
+      <script>
+         $(function() {
+              $( "#accordion,#subaccordion,#subaccordion2,#subaccordion3,#subaccordion4,#subaccordion5,#subaccordion6,#subaccordion7,#subaccordion8" ).accordion({ active: false, collapsible: true });
+          });
+         
+      </script>
+      <script>
+         ( function ($) {
+          jQuery.validator.addMethod("equals", function(value, element, param) {
+         return this.optional(element) || value === param;
+          });
+         
+          $(document).ready( function () {
+         
+           var $form = $('form');
+         
+           $form.slideform({
+         	  validate: {
+         		  rules: {
+         			  group7: {
+         				  required: true,
+         				  equals: "valid"
+         			  }
+         		  },
+         		  messages: {
+         			  group7: {
+         				  required: 'Please select an option',
+         				  equals: 'You must select valid!'
+         			  }
+         		  }
+         	  },
+         	  submit: function (event, form) {
+         		  $form.trigger('goForward');
+         	  }
+           });
+          });
+         }(jQuery))
+      </script>
+      <script>
+         (function() {
+          var formWrap = document.getElementById( 'fs-form-wrap' );
+         
+          [].slice.call( document.querySelectorAll( 'select.cs-select' ) ).forEach( function(el) {	
+           new SelectFx( el, {
+         	  stickyPlaceholder: false,
+         	  onChange: function(val){
+         		  document.querySelector('span.cs-placeholder').style.backgroundColor = val;
+         	  }
+           });
+          } );
+         
+         
+         })();
+      </script>
+      <script>
+         $( function() {
+           $( "#datepicker" ).datepicker();
+         } );
+      </script>
+      <script>
+         $('.date-form-input').click(function(){
+         	 $(this).parents('.form-group').addClass('focused');
+         	 $('.small-date').show();
+         	 $('.large-date').hide();
+            });
+      </script>
+      <script>
+         $('.effect-21').focus(function(){
+           $(this).parents('.input-effect').addClass('focused');
+         });
+         
+         $('.effect-21').blur(function(){
+           var inputValue = $(this).val();
+           if ( inputValue == "" ) {
+             $(this).removeClass('filled');
+             $(this).parents('.input-effect').removeClass('focused');  
+           } else {
+             $(this).addClass('filled');
+           }
+         })  
+         
+      </script>
+      <script>
+         $('#range').on("input", function() {
+             $('.output').val(this.value + ",000" );
+             }).trigger("change");
+               
+             $(function () {
+        $(".chkPassport").click(function () {
+            if ($(this).is(":checked")) {
+                $(".comparediv").show();
+            } else {
+                $(".comparediv").hide();
+            }
+        });
+    });			
+         </script>
+
+        
+       
+   </body>
+</html>
